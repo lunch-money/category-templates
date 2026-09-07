@@ -873,8 +873,9 @@
 - id: dink-budget
   title: DINK Budget
   author: Alex from Ontario
-  description: "This is our simple Needs - Wants - Savings budget to help us stay on target for 30% savings goal. Enough categories to place most of our transactions, with Misc. options in both the Needs and Wants groups for those strange one-off expenses (German passport application, anyone?). 
-A Work Expenses…"
+  description: |-
+    This is our simple Needs - Wants - Savings budget to help us stay on target for 30% savings goal. Enough categories to place most of our transactions, with Misc. options in both the Needs and Wants groups for those strange one-off expenses (German passport application, anyone?). 
+    A Work Expenses…
   tags:
     - Couple / household
     - Salaried employee
@@ -1505,11 +1506,12 @@ A Work Expenses…"
 - id: digital-nomad-multi-biz-property-owner
   title: Digital Nomad Multi-biz & Property Owner
   author: Dylan from San Francisco
-  description: "Keep food simple, just eating out (restaurants) and eating in (groceries).
+  description: |-
+    Keep food simple, just eating out (restaurants) and eating in (groceries).
 
-Keep entertainment simple, just one category.
+    Keep entertainment simple, just one category.
 
-I have transportation for daily life transport and travel transport separated. Since I'm a digital nomad sometimes living away from home for weeks at a time or more, I'll still…"
+    I have transportation for daily life transport and travel transport separated. Since I'm a digital nomad sometimes living away from home for weeks at a time or more, I'll still…
   tags:
     - Solo / single
     - Freelancer
@@ -1982,11 +1984,12 @@ I have transportation for daily life transport and travel transport separated. S
 - id: arts-setup
   title: Art's setup
   author: Art from The Netherlans
-  description: "Idea is to have four categories
-🎯 Goals (things you want to spend money on: savings, charity,...)
-🧾 Fixed (more or less fixed spends/obligations: rent, lease, utilites)
-🎛️ Variables (rest of usual monthly spends: food, events, hobbies)
-🧰 True expenses (occasional but sure to happen: presents, taxes, vacation)"
+  description: |-
+    Idea is to have four categories
+    🎯 Goals (things you want to spend money on: savings, charity,...)
+    🧾 Fixed (more or less fixed spends/obligations: rent, lease, utilites)
+    🎛️ Variables (rest of usual monthly spends: food, events, hobbies)
+    🧰 True expenses (occasional but sure to happen: presents, taxes, vacation)
   tags:
     - Family with kids
     - Salaried employee
@@ -2040,10 +2043,11 @@ I have transportation for daily life transport and travel transport separated. S
 - id: community-category-setup
   title: Community category setup
   author: Community member
-  description: "Structured like a P&L would be. Each major Category represents a lever in the direction of your life, the detailed spend within tells the story. 
-If you invest more dollars in the Health category and fewer dollars in the Vices category, you can expect an uptrend in Health.
+  description: |-
+    Structured like a P&L would be. Each major Category represents a lever in the direction of your life, the detailed spend within tells the story. 
+    If you invest more dollars in the Health category and fewer dollars in the Vices category, you can expect an uptrend in Health.
 
-There are Fixed or…"
+    There are Fixed or…
   tags:
     - Solo / single
     - Couple / household
