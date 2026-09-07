@@ -6,7 +6,7 @@
 # Each case builds a throwaway copy of the repo's data directory, applies one
 # defect, and asserts validation fails with a message mentioning `expect`.
 
-require "english"
+require "English"
 require "fileutils"
 require "tmpdir"
 require "yaml"

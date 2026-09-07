@@ -29,20 +29,44 @@ jobs:
     name: Open data update PR
     runs-on: ubuntu-latest
     steps:
+      # Until the token is configured there is nothing this job can do, and
+      # failing every merge would train people to ignore a red X.
+      - name: Check for marketing site token
+        id: token
+        env:
+          MARKETING_SITE_TOKEN: ${{ secrets.MARKETING_SITE_TOKEN }}
+        run: |
+          if [ -z "${MARKETING_SITE_TOKEN}" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "### Sync skipped"
+              echo
+              echo "\`MARKETING_SITE_TOKEN\` is not set, so the marketing site was not updated."
+              echo "Add a repository secret with \`contents:write\` and \`pull-requests:write\`"
+              echo "on \`${TARGET_REPO}\` to enable automatic sync."
+            } >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Check out dataset
+        if: steps.token.outputs.configured == 'true'
         uses: actions/checkout@v4
         with:
           path: category-templates
 
       - uses: ruby/setup-ruby@v1
+        if: steps.token.outputs.configured == 'true'
         with:
           ruby-version: "3.3"
 
       - name: Validate before syncing
+        if: steps.token.outputs.configured == 'true'
         working-directory: category-templates
         run: ruby scripts/validate.rb
 
       - name: Check out marketing site
+        if: steps.token.outputs.configured == 'true'
         uses: actions/checkout@v4
         with:
           repository: ${{ env.TARGET_REPO }}
@@ -50,10 +74,12 @@ jobs:
           path: marketing-site
 
       - name: Render data files
+        if: steps.token.outputs.configured == 'true'
         working-directory: category-templates
         run: ruby scripts/render-marketing-data.rb "$GITHUB_WORKSPACE/marketing-site"
 
       - name: Open or update pull request
+        if: steps.token.outputs.configured == 'true'
         working-directory: marketing-site
         env:
           GH_TOKEN: ${{ secrets.MARKETING_SITE_TOKEN }}
