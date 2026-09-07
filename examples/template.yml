@@ -1,0 +1,47 @@
+# A complete, annotated example of a single template entry.
+#
+# This file is not part of the published dataset — it exists so you can copy a
+# known-good starting point. Paste your filled-in version at the end of
+# data/templates.yml.
+
+# Stable, unique slug. Lowercase words separated by single hyphens.
+# Pick it once: it is used in links to your setup.
+- id: example-household-budget
+  # Short, distinct name shown on the card.
+  title: Example Household Budget
+  # However you would like to be credited.
+  author: Jane from Toronto
+  # Up to 600 characters. Write it for someone deciding whether this fits their life.
+  description: >-
+    A two-person household setup that keeps fixed bills separate from day-to-day
+    spending, so the variable categories are the only ones worth checking weekly.
+  # One or more tags from data/tags.yml.
+  tags:
+    - Couple / household
+    - Simple
+  # Optional. Context that does not belong in the description.
+  notes: We revisit the fixed categories once a year when bills change.
+  # Your category list in Lunch Money's import format.
+  #
+  #   - one category per line
+  #   - a leading "-" makes the line a subcategory of the closest line above it
+  #     that has no dash
+  #   - a line with no dashes beneath it is a standalone category
+  #   - properties go in square brackets at the end of a line, and may be
+  #     income, exclude_from_budget, or exclude_from_totals
+  categories: |
+    Income [income]
+    - Paycheck [income]
+    - Interest [income]
+    Fixed Bills
+    - Rent
+    - Utilities
+    - Internet
+    - Insurance
+    Variable Spending
+    - Groceries
+    - Restaurants
+    - Transit
+    - Fun
+    Savings
+    Transfers [exclude_from_budget, exclude_from_totals]

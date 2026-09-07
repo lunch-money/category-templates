@@ -1,0 +1,2591 @@
+# Lunch Money community category templates
+#
+# Each entry is one community-submitted category setup.
+# The 'categories' block uses Lunch Money's import format:
+#   - a leading "-" marks a subcategory of the line above it
+#   - properties go in square brackets: income, exclude_from_budget, exclude_from_totals
+#
+# Entries are listed oldest first. Append new submissions to the end of this file.
+# See CONTRIBUTING.md for the full schema and submission steps.
+
+- id: as-simple-as-possible-but-no-simpler
+  title: As simple as possible but no simpler
+  author: EG
+  description: Categories designed to track spending and income, not for detailed budgeting. Includes some specific categories to track particular areas of interest, and the rest are as general as possible to keep it simple.
+  tags:
+    - Solo / single
+    - Salaried employee
+    - Simple
+    - Frequent traveler
+    - Cross-border
+  categories: |
+    Moving money around [exclude_from_totals]
+    Groceries
+    Eating out
+    Rent & utilities
+    Donation
+    Art
+    Medical
+    Books
+    Phone
+    Clothes
+    Shopping
+    Electronics & tech
+    Cash back [income]
+    Into savings [income]
+    Car
+    Education
+    Entertainment
+    Fees
+    Games
+    Gifts
+    Gifts to me [income]
+    Interest [income]
+    Money exchange [exclude_from_budget]
+    Museums & landmarks
+    Music
+    Payroll [income]
+    Public/local transit
+    Services
+    Surveys [income]
+    Taxes, gov't fees
+    Travel
+
+- id: broad-spending
+  title: Broad Spending
+  author: Kevin from Seattle
+  description: We're fortunate enough to not have to budget strictly, but I am VERY particular about correctly categorizing each expense so we can easily track our spending to ensure it doesn't get out of control, and to prevent discretionary spending from ballooning. I tend to use the Shopping high-level…
+  tags:
+    - Couple / household
+    - Salaried employee
+    - High-level
+    - Power user
+    - Frequent traveler
+  categories: |
+    Food & Drink
+    - Groceries
+    - Restaurants
+    - Coffee/Tea
+    - Alcohol
+    Shopping
+    - Beauty
+    - Clothing
+    - Electronics/Software
+    - Entertainment
+    - Hobbies/Sports
+    - Other Shopping
+    Home
+    - HOA
+    - Home Insurance
+    - Mortgage
+    - Property Tax
+    - Services/Maintenance
+    Transportation
+    - Auto Insurance
+    - Auto Payment
+    - Auto Parts/Service
+    - Auto Fees/Tax
+    - Gas/Tolls
+    - 🅿️ Parking
+    - Public Transit
+    - Taxi/Ride Share
+    Travel
+    - Air Travel
+    - Land Travel
+    - Lodging/Hotel
+    Utilities
+    - Electric/Gas
+    - Internet
+    - Phone
+    - Water
+    Health
+    - Life Insurance
+    - Eye Care
+    - Gym
+    - Pharmacy
+    - Doctor
+    Pets
+    - Pet Supplies
+    - Veterinarian
+    Service Fees
+    - ATM Fees
+    - Bank Fees
+    Federal Tax
+    Transfer [exclude_from_budget, exclude_from_totals]
+    - Credit Card Payment [exclude_from_budget, exclude_from_totals]
+    - Other Transfer [exclude_from_budget, exclude_from_totals]
+    Gifts
+    Charity
+    Business Services
+    Reimbursable [exclude_from_budget, exclude_from_totals]
+    Misc/Cash
+    Income [income]
+    - Dividends [income]
+    - Earned Interest [income]
+    - Paycheck/Salary [income]
+    - Rewards [income]
+    - Sold Investments [income]
+
+- id: categorize-all-the-things
+  title: Categorize All the Things
+  author: Mike from New York
+  description: General-purpose category setup for tracking spending and investments, inspired by my history with financial software.
+  tags:
+    - Couple / household
+    - Salaried employee
+    - Detailed
+    - Power user
+    - Frequent traveler
+  categories: |
+    Cash & ATM [exclude_from_budget]
+    Credit Card Payment [exclude_from_budget, exclude_from_totals]
+    Paycheck [income]
+    Transfer [exclude_from_budget, exclude_from_totals]
+    Work Expenses [exclude_from_budget]
+    Auto & Transport [exclude_from_budget]
+    - Auto Insurance [exclude_from_budget]
+    - Gas & Fuel [exclude_from_budget]
+    - License [exclude_from_budget]
+    - Parking [exclude_from_budget]
+    - Public Transportation [exclude_from_budget]
+    - Ride Share & Taxi [exclude_from_budget]
+    - Tickets [exclude_from_budget]
+    - Tolls [exclude_from_budget]
+    Bills & Utilities
+    - HOA Fee
+    - Internet
+    - Mobile Phone
+    - Mortgage & Rent
+    - Utilities
+    Education [exclude_from_budget]
+    - Conference [exclude_from_budget]
+    - Student Loan [exclude_from_budget]
+    Entertainment [exclude_from_budget]
+    - Movies [exclude_from_budget]
+    - Museums [exclude_from_budget]
+    - Recreation [exclude_from_budget]
+    - Shows [exclude_from_budget]
+    - Video Games [exclude_from_budget]
+    Fees & Charges [exclude_from_budget]
+    - ATM Fee [exclude_from_budget]
+    - Bank Fee [exclude_from_budget]
+    - Service Fee [exclude_from_budget]
+    Financial [exclude_from_budget]
+    - Federal Tax [exclude_from_budget]
+    - Financial Software [exclude_from_budget]
+    - State Tax [exclude_from_budget]
+    - Tax Preparation [exclude_from_budget]
+    Fitness
+    - Gym
+    - Sports
+    Food
+    - Alcohol & Bars
+    - Coffee Shops
+    - Fast Food
+    - Groceries
+    - Restaurants
+    - Snacks & Desserts
+    Gifts & Donations [exclude_from_budget]
+    - Charity [exclude_from_budget]
+    - Gift [exclude_from_budget]
+    Health [exclude_from_budget]
+    - Dentist [exclude_from_budget]
+    - Doctor [exclude_from_budget]
+    - Eyecare [exclude_from_budget]
+    - Pharmacy [exclude_from_budget]
+    - Therapy [exclude_from_budget]
+    Home [exclude_from_budget]
+    - Furnishings [exclude_from_budget]
+    - Home Improvement [exclude_from_budget]
+    - Home Insurance [exclude_from_budget]
+    - Home Services [exclude_from_budget]
+    - Home Supplies [exclude_from_budget]
+    - Lawn & Garden [exclude_from_budget]
+    - Moving [exclude_from_budget]
+    Income [income, exclude_from_budget]
+    - Bonus [income, exclude_from_budget]
+    - Interest Income [income, exclude_from_budget]
+    - Misc Income [income, exclude_from_budget]
+    - Reimbursement [income, exclude_from_budget]
+    - Rewards [income, exclude_from_budget]
+    Investments [exclude_from_budget, exclude_from_totals]
+    - Buy [exclude_from_budget, exclude_from_totals]
+    - Deposit [exclude_from_budget, exclude_from_totals]
+    - Dividend & Cap Gains [exclude_from_budget, exclude_from_totals]
+    - Investment Fee [exclude_from_budget, exclude_from_totals]
+    - Sell [exclude_from_budget, exclude_from_totals]
+    - Withdrawal [exclude_from_budget, exclude_from_totals]
+    Loans [exclude_from_budget, exclude_from_totals]
+    - Loan Fees and Charges [exclude_from_budget, exclude_from_totals]
+    - Loan Payment [exclude_from_budget, exclude_from_totals]
+    Media Subscriptions
+    - Music
+    - Newspapers
+    - Streaming Services
+    Personal Care [exclude_from_budget]
+    - Cosmetics [exclude_from_budget]
+    - Hair [exclude_from_budget]
+    - Laundry [exclude_from_budget]
+    - Spa & Massage [exclude_from_budget]
+    Pets [exclude_from_budget]
+    - Pet Food & Supplies [exclude_from_budget]
+    - Pet Furnishings [exclude_from_budget]
+    - Pet Sitting [exclude_from_budget]
+    - Veterinarian [exclude_from_budget]
+    Shopping [exclude_from_budget]
+    - Books [exclude_from_budget]
+    - Clothing [exclude_from_budget]
+    - Electronics & Software [exclude_from_budget]
+    - Hobbies [exclude_from_budget]
+    - Misc Shopping [exclude_from_budget]
+    - Office Supplies [exclude_from_budget]
+    - Shipping [exclude_from_budget]
+    - Souvenirs [exclude_from_budget]
+    - Sporting Goods [exclude_from_budget]
+    Travel [exclude_from_budget]
+    - Air Travel [exclude_from_budget]
+    - Bus & Train Travel [exclude_from_budget]
+    - Hotel [exclude_from_budget]
+    - Rental Car [exclude_from_budget]
+    - Travel Insurance [exclude_from_budget]
+
+- id: family-basics
+  title: Family Basics
+  author: Tom from Chicago
+  description: Nope, but it's served us really well over the last year.
+  tags:
+    - Couple / household
+    - Detailed
+  categories: |
+    Bills
+    - HOA
+    - Insurance
+    - Internet and Mobile
+    - Subscriptions
+    - Utilities
+    Financials [exclude_from_budget, exclude_from_totals]
+    - Bank Fees [exclude_from_budget, exclude_from_totals]
+    - Credit Card Payment [exclude_from_budget, exclude_from_totals]
+    - Investment Gains/Losses [exclude_from_budget, exclude_from_totals]
+    - Planning [exclude_from_budget, exclude_from_totals]
+    - Taxes [exclude_from_budget, exclude_from_totals]
+    - Transfers [exclude_from_budget, exclude_from_totals]
+    Food
+    - Coffee and Snacks
+    - Dining Out
+    - Groceries
+    Home
+    - Cash
+    - Homegoods
+    - Improvement
+    - Miscellaneous
+    - Pets
+    - Transportation
+    - Yard
+    Income [income]
+    - Paycheck [income]
+    - Other [income]
+    Entertainment
+    - Books
+    - Gifts
+    - Healthcare
+    - Fun
+    - Personal Care
+    - Sports & Fitness
+    - Travel
+    - Wedding
+    Shopping
+    - Clothing and Shoes
+    - Electronics
+    - Everything Else
+    - Furniture
+    - Sports Equipment
+
+- id: just-millennial-things
+  title: Just Millennial Things
+  author: Harvest
+  description: This is a simple but comprehensive system that works especially well with rules and the budget features so that all your categories and subcategories are neatly tracked every month. It has everything from grouping all your bills together, to being able to track how much you spend on daily…
+  tags:
+    - Power user
+    - Simple
+    - Solo / single
+  categories: |
+    Bills & Recurring Payments
+    - Condo Fee - 1st of month
+    - Mortgage - 3rd
+    - Internet - 3rd
+    - Natural Gas - 10th
+    - Electric - 15th
+    - Cellphone - 20th
+    - Insurance - 21st
+    - Property Tax (~$X,000)
+    - Other Fees & Bills
+    Daily Necessities
+    - Groceries
+    - Health
+    - Pet
+    - Home, Auto
+    Quality of Life
+    - Entertainment
+    - Travel
+    - Shopping
+    - Hobbies
+    - Restaurants
+    Income [income]
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    Savings [exclude_from_totals]
+    - Vacation Fund [exclude_from_totals]
+    - RRSP Contribution [exclude_from_totals]
+    - TFSA Contribution [exclude_from_totals]
+    Brokerage [exclude_from_budget, exclude_from_totals]
+
+- id: variable-and-fix-separation
+  title: Variable and Fix Separation
+  author: Igi
+  description: Tagged for solo / single, salaried employee, detailed. 24 categories.
+  tags:
+    - Solo / single
+    - Salaried employee
+    - Detailed
+    - Power user
+  categories: |
+    100 Income [income]
+    - 101_Income [income]
+    - 102_Side Hustle [income]
+    200 Fix Cost
+    - 201_Utilities
+    - 202_Insurances
+    - 203_Memberships
+    - 204_Mortgage Cost
+    300 Variable Cost
+    - 301_Groceries
+    - 302_Restaurants
+    - 303_Bars-party-coffee
+    - 310_Shopping
+    - 320_Gas, Transportation
+    - 321_Auto Expenses
+    - 331_Hobbies
+    - 340_Clothing
+    - 350_Home Expenses
+    - 360_Health
+    - 370_Others
+    - 380_Travel
+    - 399_Business Expenses (Refund expected)
+    998_Mortgage Payment [exclude_from_totals]
+    999_Transfers [exclude_from_budget, exclude_from_totals]
+
+- id: functional-view
+  title: Functional View
+  author: Cody from USA
+  description: We're a family with kids and I have a job that has irregular income. I like this setup because it helps me think about i) spend I can't change (periodic, recurring, etc.) ii)  how discretionary something is (e.g., a durable vs non-durable good - you'd spend more on a couch but that purchase is as…
+  tags:
+    - Family with kids
+    - Detailed
+    - Power user
+  categories: |
+    Income [income]
+    - My Paycheck [income]
+    - Spouse Paycheck [income]
+    - My Bonus [income]
+    - Other Income [income]
+    Food
+    - Coffee
+    - Fast Food
+    - Alcohol and Bars
+    - Food Delivery
+    - Groceries
+    - Restaurants
+    Nondurable Goods (items with shelf life of less than 2 years)
+    - Home Supplies
+    - Clothing
+    - Child Clothes
+    - Child Supplies
+    - Child Toys
+    - Books
+    - Gifts
+    Durable Goods (items with shelf life > 2 years)
+    - Home Goods (couches, rugs, tables, chairs)
+    - Home Decor (stuff from Target)
+    - Electronics (laptops, phones, etc.)
+    - Child Gear (strollers, high chairs, etc.)
+    Periodic
+    - Taxes
+    - Property Tax
+    - Home Maintenance (this can be argued as "variable" but I fix things periodically)
+    - Home Insurance
+    - Auto Insurance
+    Recurring
+    - Mortgage
+    - Childcare
+    - Subscriptions
+    - Fitness
+    - Electric
+    - Gas
+    - Internet
+    - Waste
+    - Water
+    - Phone Bill
+    Variable Services
+    - Healthcare
+    - Child Activities
+    - Recreation
+    - Haircuts
+    - Beauty and Wellness
+    - Dry Cleaning
+    Transportation
+    - Gas
+    - Car Maintenance
+    - Rideshare and Public Transport
+    - Parking & Tolls
+    Travel
+    - Airfare
+    - Lodging
+    Irregular
+    - Cash Withdrawal
+    - Bank Fees
+    - Professional Fees
+    - Governmental Fees
+    Transfers [exclude_from_budget, exclude_from_totals]
+    - Payment [exclude_from_budget, exclude_from_totals]
+    - Sweep [exclude_from_budget, exclude_from_totals]
+    - Reimbursement [exclude_from_budget, exclude_from_totals]
+
+- id: simple-minimal-budget
+  title: Simple, minimal budget
+  author: Janos from Hungary
+  description: Tagged for solo / single, minimalist, simple. 28 categories.
+  tags:
+    - Solo / single
+    - Minimalist
+    - Simple
+  categories: |
+    Paycheck [income]
+    Other Income [income]
+    Needs (70%)
+    - Rent
+    - Utilities
+    - Cell Phone
+    - Groceries
+    - Transportation
+    - Insurance
+    - Healthcare
+    - Subscriptions
+    - Miscellaneous
+    Wants (10%)
+    - Dining Out
+    - Shopping
+    - Entertainment
+    - Personal Care
+    - Household
+    Savings (20%)
+    - Gifts
+    - Vacation
+    - Major Purchases
+    - Car Expenses
+    - Emergency Fund
+    - Investment
+    Bank Fees [exclude_from_budget]
+    Transfers [exclude_from_budget, exclude_from_totals]
+    - Payment, Transfer [exclude_from_budget, exclude_from_totals]
+
+- id: essential-categories
+  title: Essential Categories
+  author: Lorenzo from Italy
+  description: Tagged for couple / household, solo / single, simple. 64 categories.
+  tags:
+    - Couple / household
+    - Solo / single
+    - Simple
+  categories: |
+    Travel
+    - Air Transit
+    - Experiences
+    - Hotels
+    - ​ Travel Savings
+    - Visa
+    Food and Drinks
+    - Bars
+    - Coffee Shops
+    - Food Delivery
+    - Groceries
+    - Restaurants
+    Entertainment
+    - Books, Media
+    - Events
+    - Gaming
+    - Streaming Services
+    Housing
+    - Condo
+    - Home Insurance
+    - Home Maintenance
+    - Property Tax
+    - Rent, Mortgage
+    Shared Account
+    Utilities
+    - Electricity
+    - Gas
+    - Internet
+    - Logistics
+    - Online Subscriptions
+    - Phone
+    - Water
+    Financial
+    - Bank Fees
+    - Cash Withdrawal
+    - Credit card payment
+    - General Payment
+    - Money Exchange
+    - Taxes
+    Salary [income]
+    Short Renting [income]
+    Expense Reimbursement [income]
+    Income [income]
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    Personal Care
+    - Beauty, Wellness
+    - Education
+    - Fitness
+    - Healthcare
+    - Self-improvement
+    Family Support
+    Transportation
+    - Car Hire
+    - Car Payment
+    - Fuel
+    - 🅿️ Parking
+    - Public Transit
+    - Rideshare, Taxi
+    - Toll
+    Shopping
+    - Clothing
+    - Gifts
+    - Home Goods
+    - Online marketplaces
+
+- id: full-breakdown
+  title: Full Breakdown
+  author: Matt from Toronto
+  description: Tagged for solo / single, entrepreneur / business owner, salaried employee. 61 categories.
+  tags:
+    - Solo / single
+    - Entrepreneur / business owner
+    - Salaried employee
+    - Detailed
+    - Power user
+  categories: |
+    Savings [exclude_from_budget, exclude_from_totals]
+    Taxes
+    Account to Account [exclude_from_budget, exclude_from_totals]
+    Bank Fees [exclude_from_budget]
+    Condo - Legal [income, exclude_from_budget, exclude_from_totals]
+    Credit Card Fee
+    Credit Payment [exclude_from_budget, exclude_from_totals]
+    Discretionary Spending
+    - Cash Withdraw
+    - Donation
+    - Dragonboat
+    - Food
+    - Furniture
+    - Gas, Transportation
+    - Gifts
+    - Home Stuff
+    - Life Insurance
+    - Personal Care
+    - Physio
+    - Printful
+    - Self-improvement
+    - Shopping
+    - Tech
+    - Wrk'n Progress
+    Education
+    Fixed Spending
+    - Car Insurance
+    - Condo Insurance
+    - Condo Maintenance
+    - Electricity
+    - Mortgage
+    - Phone
+    Good Things [income]
+    - Income [income]
+    - Other Income [income]
+    - Refund [income]
+    - Reimbursement [income]
+    - Tax Refund [income]
+    Legal
+    Luxuries
+    - Charity
+    - Clothing
+    - Custom Apparel
+    - Electronics
+    - Entertainment
+    - Gaming
+    - Gym
+    - Ridesharing
+    - Spotify
+    - Tech Gadgets
+    - Travel
+    Mortgage - Lump Sum [exclude_from_totals]
+    Other [exclude_from_budget]
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    Rent
+    Required Spending
+    - Car
+    - Cat
+    - Groceries
+    - Property Tax
+    Work
+
+- id: budget-with-partner-contribution
+  title: Budget with partner contribution
+  author: Gabriel from Canada
+  description: is a budget that's separated into categories, fixed one are detailled and variable expenses as well, I mostly check the budget tab in order to see where my money goes. My partner contributes a minimum fixed amount to cover the expenses that are shared but assumed by my accounts, such as mortage,…
+  tags:
+    - Couple / household
+    - Power user
+    - Detailed
+    - Salaried employee
+  categories: |
+    INCOME [income]
+    - Paie [income]
+    - Contribution Chloé [income]
+    - Bonus et Virement (reçu) [income]
+    - Intérêt (income) [income]
+    Alimentation et nécessité
+    - Costco
+    - Épiceries
+    - Restaurant
+    Auto et transport
+    - Gas
+    - Parking
+    - Permis et Plaques
+    - Prêt Auto
+    - Réparation et entretient
+    - Ticket
+    - Transport en commun
+    Assurances
+    - Assurance Auto
+    - Assurance Maison
+    - Assurance Vie
+    Factures
+    - Frais de banque
+    - Subscription
+    Maison
+    - Facture VSAD
+    - Hydro
+    - Hypothèque
+    - Taxes Municipales
+    - Taxes Scolaire
+    - Maintenance maison
+    Autre dépenses
+    - Activité
+    - Animaux (Vet et animalerie)
+    - Cannabis
+    - Hotel
+    - Voyage
+    - Intérêt sur prêt
+    - Pharmacie et Santé
+    - Retrait en cash
+    - Shopping
+    - Virement (payé)
+    Placement
+    - Épargne Tangerine
+    - Virement Crypto
+    - Virement REER
+    - Virement CELI
+    Transfers [exclude_from_budget, exclude_from_totals]
+    - Paiement carte de crédit [exclude_from_budget, exclude_from_totals]
+    - Virement entre comptes [exclude_from_budget, exclude_from_totals]
+
+- id: this-crazy-life
+  title: This Crazy Life
+  author: Community member
+  description: Our two main goals are repaying a family loan and building up a 6-month emergency savings.
+  tags:
+    - Minimalist
+    - Salaried employee
+    - Family with kids
+    - Couple / household
+  categories: |
+    Income [income]
+    Interest and Fees
+    Housing
+    - Rent (1)
+    - Renter's Insurance (11)
+    - Storage Unit (11)
+    Utilities
+    - Electricity (22)
+    - Subscriptions
+    - Phone
+    Transportation
+    - Car Payment (12)
+    - Car Insurance (3)
+    - Gas
+    - Car Maintenance
+    Food/Drinks
+    - Groceries
+    - Restaurants
+    - Date Night Dinners
+    - Gas Station Snacks
+    - Coffee
+    - Food Delivery
+    Rhys
+    - Rhys Activities
+    - Childcare
+    - Rhys Clothing/Essentials
+    - Toys
+    Pets
+    - Food/Supplies
+    - Boarding
+    - Veterinary Care
+    Debt & Savings
+    - Parent's Loan Payment (30/31)
+    - Savings
+    Personal Care
+    - Healthcare
+    - Weed
+    - Fitness
+    - Haircuts
+    Fun Budgets
+    - Date Night Activity
+    - Events
+    - Clothing
+    - Other Fun Stuff
+    - Music stuff
+    Shopping
+    - Family Activity/Event
+    - Electronics
+    - Furniture
+    - Presents
+    - Home Goods/Maintenance
+    Vacation Spending [exclude_from_budget]
+    - Air Transit [exclude_from_budget]
+    - Adventures [exclude_from_budget]
+    - Hotels [exclude_from_budget]
+
+- id: essentials
+  title: Essentials
+  author: Mario from Spain
+  description: Tagged for solo / single, salaried employee, detailed. 55 categories.
+  tags:
+    - Solo / single
+    - Salaried employee
+    - Detailed
+  categories: |
+    Housing
+    - Cleaning
+    - Rent, Mortgage
+    Family
+    - Activities
+    - Education
+    - Gifts
+    Financial
+    - Bank Fees
+    - Taxes
+    - Interest, Fees
+    Transportation
+    - Auto Insurance
+    - Car Maintenance
+    - Car Payment
+    - Gas
+    - Public Transit
+    - 🅿️ Parking
+    - Rideshare, Taxi
+    Utilities
+    Food and Drinks
+    - Food Delivery
+    - Alcohol, Bars
+    - Coffee Shops
+    - Groceries
+    - Restaurants
+    Entertainment
+    - Events
+    - Gaming
+    - Books, Media
+    - Other Entertainment
+    Shopping
+    - Clothing
+    - Electronics
+    - Home Goods
+    - Other Shopping
+    Travel
+    - Experiences
+    - Hotels
+    - Air Transit
+    - Train / Bus Transit
+    Personal Care
+    - Healthcare
+    - Fitness
+    - Beauty, Wellness
+    - Self-improvement
+    Income [income]
+    - Salary [income]
+    - Sales [income]
+    - Payment, Transfer [income]
+    - Other income [income]
+    Subscriptions & Services
+    - Subscriptions
+    - Apps
+    - Streaming Services
+
+- id: bens-setup
+  title: Ben's setup
+  author: Ben from US
+  description: I use this category setup to separate recurring and expected expenses (bills, food) from highly variable stuff (everything else). I can accurately budget for rent, bills, and food, then set a top-level budget for everything else to stay in line with my comfortable spending level.
+  tags:
+    - High-level
+  categories: |
+    Income [income]
+    - Wages [income]
+    - Interest [income]
+    - Rewards [income]
+    Bills & Stuff
+    - Rent
+    - Insurance
+    - Bills
+    - Subscriptions
+    Food
+    - Groceries
+    - Restaurants
+    - Cafe
+    Gas / Transit
+    Donations
+    Everything Else
+    - Auto
+    - Cash & Checks
+    - Exercise / Health
+    - Entertainment
+    - Fees
+    - Gifts
+    - Home
+    - Medical
+    - Personal Care
+    - Pets
+    - Shopping
+    - Travel
+    Transfer [exclude_from_budget, exclude_from_totals]
+    - Credit Card Payments [exclude_from_budget, exclude_from_totals]
+    - Banking [exclude_from_budget, exclude_from_totals]
+    - Investment [exclude_from_budget, exclude_from_totals]
+    Ignored [exclude_from_budget, exclude_from_totals]
+    - Taxes [exclude_from_budget, exclude_from_totals]
+    - Investments [exclude_from_budget, exclude_from_totals]
+
+- id: dink-budget
+  title: DINK Budget
+  author: Alex from Ontario
+  description: "This is our simple Needs - Wants - Savings budget to help us stay on target for 30% savings goal. Enough categories to place most of our transactions, with Misc. options in both the Needs and Wants groups for those strange one-off expenses (German passport application, anyone?). 
+A Work Expenses…"
+  tags:
+    - Couple / household
+    - Salaried employee
+  categories: |
+    Income [income]
+    - Cashback [income]
+    - Government income [income]
+    - Interest earned [income]
+    - RRSP contribution [income]
+    - Other income [income]
+    - Paycheque [income]
+    Needs
+    - Bank Fees
+    - Clothing
+    - Car maintenance
+    - Gas & Transportation
+    - Groceries
+    - Health
+    - Home
+    - Insurance (Auto)
+    - Insurance (Health)
+    - Insurance (Home)
+    - Loan (Auto)
+    - Loan (Gerbe)
+    - Loan (Other)
+    - Loan (Student)
+    - Misc. (Needs)
+    - Pet
+    - Pharmacy
+    - Phone & Internet
+    - Rent/Mortgage
+    - Taxes
+    - Utilities (Gas)
+    - Utilities (Hydro)
+    - Utilities (Water & Sewage)
+    Wants
+    - Alcohol, Bars
+    - Charity
+    - Coffee
+    - Eating out
+    - Entertainment
+    - Gaming
+    - Gifts
+    - Home (Wants)
+    - Misc. (Wants)
+    - Personal Care
+    - Pet boarding
+    - Self-improvement
+    - Shopping
+    - Subscriptions
+    - Travel
+    Savings
+    - Emergency Fund
+    - Future goals
+    - Retirement
+    Work Expenses [exclude_from_budget, exclude_from_totals]
+    - Expense reimbursement [exclude_from_budget, exclude_from_totals]
+    - Work expense [exclude_from_budget, exclude_from_totals]
+    Other
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    Trade [exclude_from_budget, exclude_from_totals]
+    Withdrawal [exclude_from_budget, exclude_from_totals]
+
+- id: my-detailed-life
+  title: My Detailed Life
+  author: Bhavik from Canada
+  description: Tagged for solo / single, salaried employee, detailed. 122 categories.
+  tags:
+    - Solo / single
+    - Salaried employee
+    - Detailed
+    - Power user
+    - Frequent traveler
+  categories: |
+    Communication
+    - Other Communication
+    - Internet
+    - Mobile Phone
+    - Software
+    Entertainment
+    - Music Streaming
+    - Betting / Gambling
+    - Concerts
+    - Other Entertainment
+    - Movies
+    - Parties
+    - Hobbies
+    - Sporting Events
+    - Sports
+    - TV Streaming
+    - Video Games
+    Financial Expenses
+    - Advisory
+    - Bank Fees
+    - Fees
+    - Fines
+    - Loan
+    - Other Financial Expenses
+    - Taxes
+    Food
+    - Coffee Shops / Drinks
+    - Fast Food
+    - Other Food
+    - Food Delivery
+    - Groceries
+    - Restaurants
+    - Snack / Dessert
+    Housing
+    - Electricity / Gas
+    - Other Housing
+    - Maintenance
+    - Mortgage
+    - Property Insurance
+    - Property Tax
+    - Rent
+    - Services
+    - Water
+    Life
+    - Beauty
+    - Eye Care
+    - Charity / Donations
+    - Health Care / Doctor
+    - Health Insurance
+    - Government Expenses
+    - Life Events
+    - Physio / Chiropractor / etc
+    - Postal Services
+    Income [income]
+    - Checks / Coupons [income]
+    - Dividends [income]
+    - Freelance Work [income]
+    - Gift [income]
+    - Grants / Dues [income]
+    - Interests [income]
+    - Insurance Payout [income]
+    - Investing Sale [income]
+    - Other Income [income]
+    - Lending / Renting [income]
+    - Lottery [income]
+    - Refunds [income]
+    - Sale [income]
+    - Tax Refunds [income]
+    - Wage / Salary [income]
+    Self-improvement
+    - Books
+    - Conferences
+    - Gym / Fitness
+    - Mental Health
+    - Online Courses
+    - Other Self-improvement
+    Shopping
+    - Business Shopping
+    - Clothes and Shoes
+    - Drug Store
+    - Electronics
+    - Friend Purchase
+    - Gifts
+    - Health and Beauty
+    - Home
+    - Jewels and Accessories
+    - Kids
+    - Pets
+    - Other Shopping
+    - Stationery and Tools
+    - Sport Equipment
+    - Toys and Activities
+    Transportation
+    - Other Transportation
+    - Parking
+    - Public Transit
+    - Ridesharing
+    - Taxi
+    - Tolls
+    Travel
+    - Flights
+    - Hotels
+    - Other Travel
+    - Rental Cars
+    - Souvenirs
+    - Taxis and transportation
+    - Tourist Activities
+    Vehicle
+    - Car Insurance
+    - Car Maintenance
+    - Car Payments
+    - Gas
+    - Other Vehicle
+    - Roadside Assistance
+    Unknown
+    Transfers [exclude_from_budget, exclude_from_totals]
+    - Credit Card Payment [exclude_from_budget, exclude_from_totals]
+    - General Transfers [exclude_from_budget, exclude_from_totals]
+    - Investing [exclude_from_budget, exclude_from_totals]
+    - Savings [exclude_from_budget, exclude_from_totals]
+    - Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    - Withdrawal [exclude_from_budget, exclude_from_totals]
+
+- id: broughton-budget
+  title: Broughton Budget
+  author: Meredith from Canada
+  description: Zero-based budget that filters out "reimbursable" expenses
+  tags:
+    - Couple / household
+    - Salaried employee
+    - Pastor
+  categories: |
+    Income Streams [income]
+    - Wages (net) [income]
+    - Boys' CERB benefit [income]
+    - Income Tax refunds [income]
+    - Honourariums (eg speaking) [income]
+    - Interest and Cash Back earned [income]
+    Giving
+    - Tithe
+    - Charitable Donations - WV, Campus
+    - One-Time Charitable Gifts
+    Housing
+    - Mortgage
+    - Property Tax (Feb-Nov)
+    Savings
+    - Home Maintenance
+    - Car Maintenance
+    - Gifts and Parties
+    - Emergency Fund
+    - RESP
+    Fixed Bills
+    - Home and Car Insurance
+    - Electricity and 💧 Water
+    - Enbridge Gas
+    - Internet
+    - Netflix
+    - Amazon Prime
+    - Apple Storage
+    - Jarod Phone
+    - Meredith Phone
+    - Vocal Lessons
+    Variable
+    - Groceries
+    - Household
+    - Gas, Parking, Transit
+    - Mer - Spending Money
+    - Jarod - Spending Money
+    - Boys Allowance
+    - Mac Food (bimonthly)
+    - Family Outings/Food
+    - Date Night
+    - Childcare
+    Financial
+    - Bank Fees
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    Irregular Expenses
+    - Health/Medical not covered by benefits
+    - Clothing
+    - Haircuts
+    - School trips, pizza, etc
+    - Mac yearly vet visit
+    - Yard Maintenance & Gardening
+    - Yearly Lunch Money fee
+    - Yearly Life Insurance
+    - Travel & Cabin Lease Fee
+    Reimbursable [exclude_from_budget, exclude_from_totals]
+    Payment, Transfer, In and Out Amounts [exclude_from_budget, exclude_from_totals]
+
+- id: my-categories
+  title: My Categories
+  author: Jose S
+  description: Evolved from my Mint use
+  tags:
+    - Family with kids
+    - Salaried employee
+    - Detailed
+  categories: |
+    Auto & Transport Category
+    - OTHER Auto & Transport
+    - AAA Membership Fee
+    - Auto Accessories
+    - Auto Payment
+    - Auto Registration
+    - Auto Loan
+    - Auto Service & Parts
+    - Car Wash
+    - Driving Classes
+    - Gas & Fuel
+    - MVC Fees
+    - Parking
+    - Public Transportation
+    - Tolls
+    - Traffic fines
+    - Transport - Rental Car & Taxi
+    - Auto - Legal Fees
+    Entertainment Category
+    - OTHER Entertainment
+    - Entertainment Annual
+    - Entertainment Monthly
+    - Movies & DVDs
+    - Museums
+    - Netflix
+    - Newspapers & Magazines
+    - Outdoor Entertainment
+    - Sports Entertainment
+    - TV Monthly
+    - TV Annual Subscriptions
+    - Live Shows
+    Fees & Charges Category
+    - Bank Fee
+    - Credit Card Annual
+    - Late Fee
+    - Service Fee
+    Food Dining Category
+    - OTHER Food & Dining
+    - Alcohol & Bars
+    - Bakery/Dessert
+    - Coffee Shops
+    - Fast Food
+    - Food Takeout
+    - Food Delivery
+    - Food Trucks
+    - Hospital Dining
+    - Meal Kits
+    - Movie Concessions
+    - Pizza
+    - Restaurants
+    - Work Lunch
+    Food Home Category
+    - Groceries
+    - Meat Market
+    - Water Delivery
+    Gifts & Donations Category
+    - Charity
+    - Donations
+    - Gift
+    Health & Fitness Category
+    - OTHER Medical
+    - Doctor
+    - Eyecare
+    - Gym
+    - Health & Fitness
+    - Lab
+    - Pharmacy
+    - Pregnancy Bills
+    Home Category
+    - HOA Fees
+    - Home Appliances
+    - Home Furnishings
+    - Home Services
+    - Home Supplies
+    - Mortgage & Rent
+    - New Home Purchase
+    Home - Bills & Utilities Category
+    - Electric Bill
+    - Gas Bill
+    - Internet Bill
+    - Phone Bill
+    - TV Bill
+    - Water/Sewer Bill
+    Immigration Category
+    - Passport Photos
+    - Notary Expenses
+    - Passport/Visa Fees
+    - US Immigration
+    Income Category [income]
+    - Bonus [income]
+    - Credit Card Rewards [income]
+    - Rebates [income]
+    - Reimbursement [income]
+    - Federal Stimulus [income]
+    - Federal Tax Refund [income]
+    - Income [income]
+    - Interest Income [income]
+    - Parking Reimbursement [income]
+    - Paycheck [income]
+    - State Stimulus [income]
+    - State Tax Refund [income]
+    Insurance
+    - Auto Insurance
+    - Health Insurance
+    - Home Insurance
+    - Life Insurance
+    Investments Category [exclude_from_budget, exclude_from_totals]
+    - ESOP Charges [exclude_from_budget, exclude_from_totals]
+    - Investments - Transactions [exclude_from_budget, exclude_from_totals]
+    - Investments - Deposits [exclude_from_budget, exclude_from_totals]
+    - Financial [exclude_from_budget, exclude_from_totals]
+    - Investments [exclude_from_budget, exclude_from_totals]
+    Kids Category
+    - Baby Supplies
+    - Babysitter & Daycare
+    - Kids Activities
+    - Kids Apps
+    - Kids Birthday Party
+    - Kids Books
+    - Kids Clothing
+    - Kids Education
+    - Kids Entertainment
+    - Kids Food
+    - Kids Furnishings
+    - Kids Games
+    - Kids Medicine
+    - Kids Passport/Visa
+    - Kids Personal Care
+    - Kids Photography
+    - Toys
+    Loans Category
+    - Salary Loan
+    - Loan
+    - Loan Payment
+    Personal Care Category
+    - Hair
+    - Laundry
+    - Spa & Massage
+    - Salon
+    Professional Category
+    - Books
+    - Career Development & Training
+    - Work Dining
+    - Work Event
+    - Work Expenses
+    - Work Supplies
+    - Work Travel
+    Services Category
+    - Online Services
+    - Printing
+    - Shipping
+    Shopping Category
+    - OTHER Shopping
+    - Clothing
+    - Computer Games
+    - Electronics & Software
+    - Hobbies
+    - Home Goods Shopping
+    - Jewelry
+    - Mobile Accessories
+    - Mobile Phone Purchase
+    - Pet Food & Supplies
+    - Shopping Subscription
+    - Sporting Goods
+    - Superstores
+    - Utensils
+    Taxes Category
+    - Capital Taxes
+    - State Tax Payment
+    - Tax Preparation
+    - Taxes
+    Travel Category
+    - OTHER Travel
+    - Air Travel
+    - Hotel
+    - Sightseeing
+    - Travel Parking
+    - Travel Activities
+    - Travel Food/Dining
+    - Travel Passport/Visa
+    - Travel Photos
+    - Travel Rental Car & Taxi
+    - Travel Shopping
+    - Travel Transportation
+    - Vacation
+    Other Expenses Category
+    - OTHER Expenses
+    - Cash & ATM
+    - Mobile Phone Repair
+    - Money to Family
+    Transfer Category [exclude_from_budget, exclude_from_totals]
+    - Transfer - Mortgage & Rent [exclude_from_budget, exclude_from_totals]
+    - Credit Card Payment [exclude_from_budget, exclude_from_totals]
+    - Transfer to Accounts [exclude_from_budget, exclude_from_totals]
+
+- id: boards-setup
+  title: Board's setup
+  author: Board Gamer from Canada
+  description: Tagged for solo / single, salaried employee. 43 categories.
+  tags:
+    - Solo / single
+    - Salaried employee
+  categories: |
+    Accounting and financial planning
+    Bank Fees
+    Board games
+    Clothing and accessories
+    Electronics
+    Entertainment
+    Food
+    - Bars
+    - Coffee Shops
+    - Fast food
+    - Groceries
+    - Other food and drink
+    - Restaurants
+    - Vending machines
+    Gifts, Donations
+    Government Fees
+    Health
+    - Dental care
+    - Eye care
+    - Hair
+    - Personal Care
+    - Pharmacies and supplements
+    Home
+    - Condo fees
+    - Home Insurance
+    - Home supplies
+    - Mortgage
+    - Property Tax
+    Home Equity [exclude_from_budget, exclude_from_totals]
+    Hotel
+    Income [income]
+    Intercity Travel
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    Postage and shipping
+    Public Transit
+    Self-improvement
+    Shopping
+    Tax
+    Utilities
+    - Electricity
+    - Internet
+    - Mobile phone
+    Withdrawal [exclude_from_budget, exclude_from_totals]
+
+- id: evans-basics
+  title: Evans Basics
+  author: Evan Purkhiser
+  description: Tagged for solo / single, salaried employee, detailed. 35 categories.
+  tags:
+    - Solo / single
+    - Salaried employee
+    - Detailed
+  categories: |
+    Income [income]
+    Income (bonus) [income]
+    Income (marketplace) [income]
+    Consumable Food
+    - Restaurants
+    - Coffee Shops
+    - Snacks
+    - Alcohol, Bars
+    - Food Delivery
+    - Groceries
+    Experiences
+    - Therapist
+    - Shopping
+    - Entertainment
+    - Travel
+    - Personal Care
+    - Self-improvement
+    - Gifts
+    - Relational Goodwill
+    Utility
+    - Rent
+    - Utilities
+    - Services
+    - Phone Bill
+    - Health
+    - Transportation
+    - Bank Fees
+    Savings
+    ATM
+    Other
+    ⌛ Waiting on Refund [exclude_from_budget, exclude_from_totals]
+    z-ignored [exclude_from_budget, exclude_from_totals]
+    z-venmo
+    z-loans [exclude_from_budget, exclude_from_totals]
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+
+- id: managing-household-expenses
+  title: Managing Household Expenses
+  author: Scandinavians in Michigan
+  description: It's working for us.
+  tags:
+    - Couple / household
+  categories: |
+    Auction
+    Auto
+    - Accessories
+    - Battery & Tires
+    - Insurance
+    - Gas
+    - Oil & filter
+    - Parking
+    - Service
+    - Wash
+    Business Expenses
+    Clothing
+    Delivery
+    Education
+    Entertainment
+    Food
+    - Dining
+    - Groceries
+    Fraud
+    Household
+    Income [income]
+    - Interest earned [income]
+    - Social Security (G) [income]
+    - Social Security (M) [income]
+    Medical
+    - Doctor & Dentist
+    - Medical Devices
+    - OTC
+    - RX
+    Money Movement
+    - Adjustment
+    - Charity
+    - Church
+    - Interest Paid
+    - Gifts Given
+    - Gifts Received
+    - Rewards
+    - Wallet
+    Office
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    Personal Care
+    Self-improvement
+    Taxes
+    Utilities
+    - Cell
+    - Gas & Electric
+    - Internet
+    - Phone
+    - Water, Sewer, Trash
+    Withdrawal [exclude_from_budget, exclude_from_totals]
+    Housing
+    - Rent
+    - Renter's Insurance
+    Bank Charges
+    Finance
+
+- id: digital-nomad-multi-biz-property-owner
+  title: Digital Nomad Multi-biz & Property Owner
+  author: Dylan from San Francisco
+  description: "Keep food simple, just eating out (restaurants) and eating in (groceries).
+
+Keep entertainment simple, just one category.
+
+I have transportation for daily life transport and travel transport separated. Since I'm a digital nomad sometimes living away from home for weeks at a time or more, I'll still…"
+  tags:
+    - Solo / single
+    - Freelancer
+    - Entrepreneur / business owner
+    - Simple
+    - Frequent traveler
+    - Own rental properties
+  categories: |
+    Fees
+    Cash & ATM
+    Gifts & Donations
+    Taxes
+    Investment [exclude_from_budget, exclude_from_totals]
+    Entertainment & Recreation
+    Uncategorized
+    Rent Houses [exclude_from_totals]
+    - Rent Home Taxes [exclude_from_totals]
+    - Rent Home Mortgage [exclude_from_totals]
+    - Rent Home Insurance [exclude_from_totals]
+    - Rent Home Improvement [exclude_from_totals]
+    Food & Drink
+    - Groceries
+    - Restaurants
+    My Household
+    - House Cleaning
+    - Home Insurance
+    - Phone
+    - Rent
+    - Utilities
+    Transportation
+    - Bicycles & mobility
+    - Parking & Tolls
+    - Gas
+    - My Car
+    - Public Transit
+    - Uber/Lyft
+    Travel & Vacation
+    - Air/Train/Bus Travel
+    - Lodging
+    - Misc Travel
+    - Rental Car & Taxi
+    Bike to Everything Company
+    - Advertising
+    - Office Expenses
+    - Supplies
+    Rental Income [income, exclude_from_totals]
+    Income [income]
+    - Bike to Everything Company Income [income]
+    - Salary Income [income]
+    - Misc Income [income]
+    - Interest Income [income]
+    Shopping
+    - Clothing
+    - Hobbies
+    - Misc Shopping
+    Health & Fitness
+    - Medical
+    - Body Work
+    - Therapy
+    - Gym
+    Transfer [exclude_from_budget, exclude_from_totals]
+    Credit Card Payment [exclude_from_budget, exclude_from_totals]
+
+- id: where-it-all-goes
+  title: Where It All Goes
+  author: Mark from Wisconsin
+  description: Everything we track is a subcategory.  We never put anything in the parent categories, those we use just for grouping to make it more easy to see our spend across various larger buckets.
+  tags:
+    - Couple / household
+    - Salaried employee
+    - Detailed
+    - Power user
+    - Frequent traveler
+  categories: |
+    Income [income]
+    - Salary [income]
+    - Interest [income]
+    - Other Income [income]
+    Giving
+    - Lord's Work
+    - Giving to Others
+    - Christmas
+    Savings [exclude_from_totals]
+    - Retirement Savings (Roth IRAs) [exclude_from_totals]
+    - Long Term Savings (Brokerage accounts) [exclude_from_totals]
+    Housing
+    - Mortgage
+    - Home Improvement
+    - Household
+    - Electric
+    - Natural Gas
+    - Water/Sewer/Trash
+    - Internet
+    - Cell Phone
+    Transportation
+    - Auto Gas & Oil
+    - Car Repairs
+    - Car Replacement
+    Food
+    - Groceries
+    - Restaurants/Snacks
+    Lifestyle
+    - Clothing
+    - Health
+    - Personal Care Products
+    - Sports/Entertainment
+    - Electronics
+    - Professional Development
+    - Personal Development
+    - Vacations
+    - Marriage
+    - Family
+    - Fun Money - His
+    - Fun Money - Hers
+    - Miscellaneous
+    - Reimbursements
+    Insurance & Tax
+    - Homeowners Insurance
+    - Auto Insurance & Licensing
+    - Life Insurance
+    - Umbrella Insurance
+    - Property Taxes
+    Transfers [exclude_from_budget, exclude_from_totals]
+    - Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    - Balance Adjustment [exclude_from_budget, exclude_from_totals]
+
+- id: tax-time-ready-digital-nomad-family-complex
+  title: Tax-Time Ready (Digital Nomad Family - Complex)
+  author: Monica living in South Korea
+  description: Multiple rental properties in multiple states (some self- managed), expat family living overseas with a government civilian w-2 and a freelance&consulting spouse, active kids plus volunteering, and future-proofing investing. These categories have been developed and refined for over 15years for DIY…
+  tags:
+    - Couple / household
+    - Family with kids
+    - Freelancer
+    - Salaried employee
+    - Detailed
+    - Cross-border
+    - Entrepreneur / business owner
+    - Tax Optimization
+  categories: |
+    Transfers [exclude_from_budget]
+    - $ Cash on Hand ↔ Convert to ₩ [exclude_from_budget]
+    - $ Credit Card Payments [exclude_from_budget]
+    - $ Transfer ↔ Cash on Hand [exclude_from_budget]
+    - $ Transfer ↔ Convert to ₩ [exclude_from_budget]
+    - $ Internal Transfer [exclude_from_budget]
+    - $ Transfer (USD → USD) [exclude_from_budget]
+    - $ Miscellaneous Transfers [exclude_from_budget]
+    Business (Consulting)
+    - Business – Advertising & Job Hunting
+    - Business – Bad Debt Write-Off
+    - Business – Client Gifts
+    - Business – Communications Expenses
+    - Business – Continuing Education
+    - Business – Insurance
+    - Business – Legal & Professional Fees
+    - Business – Moving Expenses
+    - Business – Office Expenses: Furnishings & Décor
+    - Business – Other Expenses: Office Supplies & Consumables
+    - Business – Professional Memberships & Dues
+    - Business – Repairs & Maintenance
+    - Business – Supplies: Computer, Phone, Electronics & Accessories
+    - Business – Supplies: Shipping & Postage
+    - Business – Taxes, Licenses & Fees
+    - Food – M&IE Clients & Networking (Business)
+    - Food – M&IE Travel (Business)
+    Employment
+    - Employment - Travel (Unreimbursed)
+    - Employment - Unreimbursed Equipment
+    - Employment - Unreimbursed Food & Entertainment
+    - Food – PCS & Quarantine
+    Financial & Investing
+    - Financial – Bank Fees
+    - Financial – Interest & Credit Card Fees
+    - Financial – Memberships & Subscriptions
+    - Reimbursement – Pending
+    - Reimbursement – Paid
+    - Reimbursement – Rewards, Rebates & Refunds
+    - Reimbursement – Debt Write-Off
+    - Securities – Crypto Token Purchase
+    - Securities – Investment
+    - Securities – IRA Contributions
+    - Securities – Life Insurance
+    - Taxes – Federal & State
+    - Taxes – International (Korean)
+    Housing
+    - Housing – Closing Costs
+    - Housing – Furnishings, Décor & Kitchen Supplies
+    - Housing – Mortgage, Escrow & Rent
+    - Housing – Professional Cleaning
+    - Housing – Property Insurance
+    - Housing – Renter’s Insurance
+    - Housing – Repair, Maintenance & Improvements
+    - Housing – Supplies: Maintenance & Cleaning
+    - Housing - USAA Insurance (Split)
+    - Utility – Cable & Internet
+    - Utility – Cell Phone
+    - Utility – Garbage
+    - Utility – Gas & Electric
+    - Utility – HOA
+    - Utility – Home Warranty
+    - Utility – Sewer
+    - Utility – Water
+    - Utility – Yard Service & Pest Control
+    Lifestyle
+    - Food – Alcohol
+    - Food – Coffee & Desserts
+    - Food – Dining Out
+    - Food – Fast Food
+    - Food – Festivals & Food Trucks
+    - Food – Groceries
+    - Education – Academic Programs & Fees
+    - Education – Required School Supplies
+    - Education – Savings
+    - Education – Student Loans
+    - Education – Supplemental Home Instruction
+    - Education – Textbooks & Materials
+    - Education – Tuition & Fees
+    - Entertainment – Events & Culture
+    - Entertainment – Fitness & Recreation
+    - Entertainment – Games, Hobbies & Crafts
+    - Entertainment – Hosting & Holidays
+    - Entertainment – Leisure & Play
+    - Entertainment – Media & Subscriptions
+    - Family – Activities, Sports & Programs
+    - Family – Babysitting
+    - Family – Pets
+    - Gifting – Our Family
+    - Gifting – Donations & Fundraisers
+    - Gifting – Flowers
+    - Gifting – Friends & Family
+    - Gifting – Volunteering (Non-Reimbursable Expenses)
+    - Personal Care – Clothing & Accessories
+    - Personal Care – Haircuts & Haircare
+    - Personal Care – Self Care & Vanity
+    - Personal Care – Toiletries & Hygiene
+    Income [income]
+    - Income – 1099 [income]
+    - Income – Goods Sold [income]
+    - Income – Investment, Dividends & Capital Gains [income]
+    - Income – Wages [income]
+    - Rental – Rent & Deposit [income]
+    - Rental – Rent & Deposit (Split in Property Management) [income]
+    Medical
+    - Food – Medical
+    - Medical – Chiro, Massage & Bodywork
+    - Medical – Doctor, Dental & Mental Health
+    - Medical – Facility
+    - Medical – Lab & X-ray
+    - Medical – Lodging
+    - Medical – OTC & Supplements
+    - Medical – Premiums
+    - Medical – Rx
+    - Medical – Supplies & Equipment
+    - Medical – Transportation
+    - Medical – Vision
+    Rental Properties
+    - Rental – Advertising & Marketing
+    - Rental – Closing Costs
+    - Rental – Furnishings, Décor & Kitchen Supplies
+    - Rental – Management Fees & Legal
+    - Rental – Mortgage & Escrow
+    - Rental – Non-Sufficient Funds
+    - Rental – Property Insurance
+    - Rental – Repair, Maintenance & Improvements
+    - Rental – Supplies: Maintenance & Cleaning
+    - Rental – Umbrella Insurance
+    - Rental Utility – Cable & Internet
+    - Rental Utility – Garbage
+    - Rental Utility – Gas & Electric
+    - Rental Utility – HOA
+    - Rental Utility – Home Warranty
+    - Rental Utility – Reimbursement
+    - Rental Utility – Sewer
+    - Rental Utility – Water
+    - Rental Utility – Yard Service & Pest Control
+    Travel
+    - Travel – Air
+    - Travel – Auto Insurance
+    - Travel – Auto Maintenance
+    - Travel – Auto Payment
+    - Travel – Auto Rental
+    - Travel – Car Wash
+    - Travel – Child Safety
+    - Travel – Gas
+    - Travel – Lodging & Venue
+    - Travel – Parking
+    - Travel – Public Transportation
+    - Travel – Registration & Fees
+    - Travel - Supplies & Luggage
+    - Travel – Tolls
+    - Travel – Traffic Violations
+    - Vacation – Entertainment, Meals & Fun
+    - Vacation – Lodging
+    - Vacation – Transportation
+    ? Unknown
+
+- id: growing-family-granular-detail
+  title: Growing Family Granular Detail
+  author: Ethan a nomad
+  description: A setup for saving-focused budgeters who like a place for everything and everything in its place.
+  tags:
+    - Family with kids
+    - Detailed
+    - Salaried employee
+  categories: |
+    Income [income]
+    - Active [income]
+    - Passive [income]
+    Home
+    - Rent
+    - Utilities
+    - Home Maintenance
+    Children
+    - Curriculum & Supplies
+    - Kids Activities
+    - Nanny
+    Daily Living
+    - Groceries / Supplies
+    - Dining Out
+    - Telecommunication
+    - Business Services
+    Health
+    - Gym
+    - Dental/Vision
+    - Pharmacy
+    - OOP Expenses
+    Personal
+    - Shopping
+    - Subscriptions
+    - Personal Care
+    - Gifts
+    - Entertainment
+    - Life Insurance
+    Savings Account
+    - Travel
+    - Devices
+    - New Car
+    - Vacation
+    Transportation
+    - Public Transit
+    - Gas
+    - Car Insurance
+    - Repairs & Maintenance
+    - Annual Expenses (Car)
+    Giving
+    Mic. Cash
+    Transfers [exclude_from_budget, exclude_from_totals]
+    Investments [exclude_from_budget, exclude_from_totals]
+    - Buy/Contribution [exclude_from_budget, exclude_from_totals]
+    - Capital Gain/Dividend [exclude_from_budget, exclude_from_totals]
+    - Sell/Distribution [exclude_from_budget, exclude_from_totals]
+
+- id: detailed
+  title: Detailed
+  author: Amelia
+  description: Similar to a P/L Statement with home categories added
+  tags:
+    - Solo / single
+    - Detailed
+  categories: |
+    Credit Card Payment [exclude_from_budget, exclude_from_totals]
+    Bank Transfer [exclude_from_budget, exclude_from_totals]
+    Income [income]
+    Interest [income]
+    Rent
+    Home Expenses
+    - Grocery
+    - Tea Budget
+    - Restaurants
+    - Fast Food & Takeout
+    - Household Supplies
+    - Appliance Repairs & Accessories
+    - Cleaning Supplies
+    Building Maintenance
+    - Garden Supplies
+    - Lawn Maintenance
+    - Pest Control
+    - Repairs
+    Utilities
+    - Phone
+    - Internet
+    - Water
+    - Electricity
+    - Propane
+    - Garbage
+    - Sewer
+    Pet Expenses
+    - Dog Food
+    - Dog Treats
+    - Dog Vet Bills
+    - Dog Supplements
+    - Dog Dental Cleaning
+    - Dog Insurance
+    - Dog Grooming
+    - Dog Boarding
+    - Dog Training
+    - Dog Toys
+    - Dog Other
+    Health & Appearance
+    - Gym Memberships
+    - Apparel
+    - Hairdresser
+    - Skincare Supplies
+    Medical
+    - Doctor Visits
+    - Copay
+    - Dental
+    - Prescriptions
+    - Vitamins
+    Insurance
+    - Health
+    - Life
+    Travel
+    - Airfare
+    - Hotels
+    - Meals
+    - Car Rental
+    - Taxis and Shared Rides
+    Entertainment
+    - Music Subscriptions
+    - Movies
+    - Video Games
+    - Books
+    - Events
+    - Streaming Subscriptions
+    - Magazine Subscriptions
+    - Other
+    Vehicle Expenses
+    - Car Maintenance & Repairs
+    - Tires
+    - Gas
+    - Car Wash
+    - Car Insurance
+    - Registration & Taxes
+    Office Expenses
+    Education
+    Tech Repairs & Accessories
+    Postage & Shipping
+    Subscriptions & Services
+    - Subscriptions
+    Professional Fees
+    Sports & Recreational Expenses
+    Equipment Expense
+    - Car
+    - Furniture & Fixtures
+    Other Miscellaneous Expenses
+    Bank Service Charges
+    - Account Fee
+    - International Transaction Fee
+    Do Good Things
+    Gifts
+    - Presents
+    - Christmas
+    - Christmas Cards
+    Credit Card Rewards
+    Interest Expense
+    Taxes
+    - Federal
+    - State
+    Savings Group
+    - Investing
+    - Emergency Fund
+    - House Savings
+    Equipment Replacement Savings
+    - Phone Fund
+    - Computer Fund
+    - Lawn Mower Fund
+
+- id: arts-setup
+  title: Art's setup
+  author: Art from The Netherlans
+  description: "Idea is to have four categories
+🎯 Goals (things you want to spend money on: savings, charity,...)
+🧾 Fixed (more or less fixed spends/obligations: rent, lease, utilites)
+🎛️ Variables (rest of usual monthly spends: food, events, hobbies)
+🧰 True expenses (occasional but sure to happen: presents, taxes, vacation)"
+  tags:
+    - Family with kids
+    - Salaried employee
+    - Detailed
+  categories: |
+    Goals
+    - Emergency
+    - Savings
+    - charity
+    Fixed
+    - Transportation lease
+    - Software (Essential)
+    - Rent, Mortgage
+    - Utilities / Electricity
+    - Utilities / Internet
+    - Utilities / Phone
+    - Utilities / Water
+    Variable
+    - beauty
+    - Entertainment / Gaming
+    - Hobby/Sport / 3D printing
+    - Hobby/Sport / Drawing/arts
+    - Hobby/Sport / Field hockey
+    - Hobby/Sport / Freerun
+    - Hobby/Sport / GYM
+    - Hobby/Sport / Paardrijden
+    - pleasure (SPA)
+    - 🅿️ Transportation / Parkings
+    - Education / taal
+    - Food & Drinks / Eating out
+    - Food & Drinks / Groceries
+    - Entertainment / Events
+    - Entertainment / Streaming Services
+    - Transportation / Public Transit
+    - Transportation / Carsharing
+    - Shopping / Clothing
+    - Shopping / Electronics
+    - Shopping / Home Goods
+    - Kids tutors
+    True expenses
+    - fees, taxes, fines
+    - Fix ASAP (forgotten subs)
+    - presents
+    - Software (Annual/Non-essential)
+    - Therapy
+    - Vacation
+    Business
+    Income [income]
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+
+- id: community-category-setup
+  title: Community category setup
+  author: Community member
+  description: "Structured like a P&L would be. Each major Category represents a lever in the direction of your life, the detailed spend within tells the story. 
+If you invest more dollars in the Health category and fewer dollars in the Vices category, you can expect an uptrend in Health.
+
+There are Fixed or…"
+  tags:
+    - Solo / single
+    - Couple / household
+    - Power user
+    - Frequent traveler
+    - Salaried employee
+  categories: |
+    Income [income]
+    - Paycheck [income]
+    - Bonus [income]
+    - Tax Return [income]
+    - Interest Income [income]
+    - Rental Income [income]
+    - Reimbursement [income]
+    - Other Income [income]
+    Home
+    - Mortgage & Rent
+    - Internet
+    - Utilities
+    - Home Insurance
+    Travel & Entertainment
+    - Concerts & Festivals
+    - Vacation
+    - Air & Rail
+    - Hotel
+    - Rental Car
+    - Entertainment
+    Food
+    - Restaurants
+    - Groceries
+    - Fast Food
+    - Food Delivery
+    - Pharmacy
+    - Bakeries
+    - Coffee Shops
+    Shopping
+    - Television
+    - Video Games
+    - Clothing
+    - General Shopping
+    - Furnishings
+    - Hair & Laundry
+    - Subscriptions & Electronics
+    - Home Improvement
+    Fitness
+    - Fitness Devices
+    - Golf
+    - Gym
+    - Personal Trainer
+    - Snow Sports
+    - Basketball League
+    - Basketball Training
+    - Supplements
+    - Weights
+    Health
+    - Psychologist
+    - Dentist
+    - Massage
+    - Physio
+    - Chiropractor
+    - Orthotics
+    - Eyecare
+    - Doctor
+    - Dermatologist
+    - Health Insurance
+    Transport
+    - Car Payment
+    - Parking & Toll
+    - Car Insurance
+    - Gas & Fuel
+    - Public Transport
+    - Taxi
+    - Service & Parts
+    Admin
+    - Police
+    - Mobile Phone
+    - Bank Fee
+    - Business Services
+    - Education
+    - Loan Interest Expense
+    Gifts
+    - Pet
+    - Charity
+    - Gift
+    - Gift (family)
+    - Gift (friends)
+    - Gift (girlfriend)
+    - Gift (work)
+    Vices
+    - Alcohol & Bars
+    - LCBO & Beer Store
+    - Drugs
+    - Nicotine
+    Investments group [exclude_from_budget, exclude_from_totals]
+    - Buy [exclude_from_budget, exclude_from_totals]
+    - Deposit [exclude_from_budget, exclude_from_totals]
+    - Dividend & Cap Gains [exclude_from_budget, exclude_from_totals]
+    - Investments [exclude_from_budget, exclude_from_totals]
+    Loans [exclude_from_budget, exclude_from_totals]
+    - Loan Payment [exclude_from_budget, exclude_from_totals]
+    - Loan Principal [exclude_from_budget, exclude_from_totals]
+    Exclude [exclude_from_budget, exclude_from_totals]
+    - Cash & ATM [exclude_from_budget, exclude_from_totals]
+    - Check [exclude_from_budget, exclude_from_totals]
+    - Credit Card Payment [exclude_from_budget, exclude_from_totals]
+    - Hide from Budgets & Trends [exclude_from_budget, exclude_from_totals]
+    - Transfer [exclude_from_budget, exclude_from_totals]
+    - Transfer for Cash Spending [exclude_from_budget, exclude_from_totals]
+    - Transfer for Shared Rent [exclude_from_budget, exclude_from_totals]
+
+- id: sids-setup
+  title: Sid's setup
+  author: Sid from San Diego
+  description: Tagged for family with kids, salaried employee. 132 categories.
+  tags:
+    - Family with kids
+    - Salaried employee
+  categories: |
+    Investment Transfer [exclude_from_budget, exclude_from_totals]
+    Loan Payment [exclude_from_budget, exclude_from_totals]
+    ATM Withdrawals
+    Auto & Transport
+    - Auto Insurance
+    - Auto Payment
+    - Auto Registration
+    - Auto Repair & Maintenance
+    - Auto Tolls
+    - Gas & Fuel
+    - Parking
+    - Public Transportation
+    - Ride Share
+    Convinience Stores
+    Entertainment
+    - Amusement
+    - Hobbies
+    - Movies & DVDs
+    - Music
+    - Newspapers & Magazines
+    - Television
+    Fees & Charges
+    - ATM Fee
+    - Bank Fee
+    - Credit Card Fees
+    - Late Fee
+    - Legal
+    - Passport/Visa Fees
+    - Service Fee
+    Food
+    - Alcohol & Bars
+    - Coffee Shops
+    - Fast Food
+    - Food & Dining
+    - Food Delivery
+    - Groceries
+    - Restaurants
+    Gifts & Donations
+    - Charity
+    - Gift
+    Health & Fitness
+    - Doctor
+    - Eyecare
+    - Gym
+    - Hair
+    - Health Insurance
+    - Personal Care
+    - Pharmacy
+    - Spa & Massage
+    - Sports
+    Hide from Budgets & Trends [exclude_from_budget, exclude_from_totals]
+    Home
+    - HOA dues
+    - Home Improvement
+    - Home Insurance
+    - Home Services
+    - Home Supplies
+    - Lawn & Garden
+    - Mortgage & Rent
+    - Pool Maintenance
+    - Property Tax
+    Income Group [income]
+    - Check Deposits [income]
+    - Credit Card Rewards [income]
+    - DCFSA reimbursements [income]
+    - Disability Pay [income]
+    - Interest Income [income]
+    - Bonus [income]
+    - Paycheck [income]
+    - Refunds [income]
+    - Sale of Stock [income]
+    Inter account Transfer
+    Investment Property
+    - HOA Investment Property
+    - Insurance Investment Property
+    - Mortgage Investment Property
+    - Rental Income
+    - Repair Investment Property
+    - Taxes Investment Property
+    Investment Transactions [exclude_from_budget, exclude_from_totals]
+    Kids
+    - Babysitter
+    - Baby Supplies
+    - Day Care
+    - Kids Activities
+    - Kids Shopping
+    Misc Expenses
+    - Advertising
+    - Education
+    - Liability Insurance
+    - Printing
+    - Shipping
+    - Work related
+    Pets
+    - Pet Food & Supplies
+    - Pet Grooming
+    - Pet Hotel
+    - Veterinary
+    Savings [exclude_from_budget, exclude_from_totals]
+    - College Fund [exclude_from_budget, exclude_from_totals]
+    - Investment Other [exclude_from_budget, exclude_from_totals]
+    - Loan Withdrawal [exclude_from_budget, exclude_from_totals]
+    - Mortgage & Loan Principal Payments [exclude_from_budget, exclude_from_totals]
+    - Retirement [exclude_from_budget, exclude_from_totals]
+    Shopping
+    - Books & Supplies
+    - Clothing
+    - Electronics & Software
+    - Furnishings
+    - Home Stuff
+    - Office Supplies
+    - Shopping General
+    - Sporting Goods
+    Taxes
+    - Federal Tax
+    - State Tax
+    - Tax Preparation
+    Travel
+    - Air Travel
+    - Hotel
+    - Rental Car & Taxi
+    - Vacation
+    Utilities
+    - Electricity
+    - Electricity & Gas
+    - Home Phone
+    - Internet
+    - Mobile Phone
+    - Natural Gas Bill
+    - Solar Electricity
+    - Trash Pickup
+    - Water & Sewage
+
+- id: the-breakdown
+  title: The Breakdown
+  author: Taryn from Germany and The US
+  description: I play around with my categories as I get more familiar with my spending habits.
+  tags:
+    - Solo / single
+    - Salaried employee
+    - Detailed
+    - Frequent traveler
+  categories: |
+    ATM Cash
+    Debt payment
+    DIV [income, exclude_from_budget, exclude_from_totals]
+    Donations
+    Education
+    Entertainment
+    Financial Services, Fees, & Taxes
+    Food & Drinks Out
+    - Bars & Restaurants
+    - Cafe
+    Friends
+    Gifts
+    Groceries
+    Home
+    - Rent
+    - Utilities
+    Healthcare
+    - Pharmacy
+    - Doctor Co-Pays
+    Income [income]
+    Insurance
+    Interest Charge On Purchases
+    Internal Transfer [exclude_from_budget, exclude_from_totals]
+    Payment [exclude_from_budget, exclude_from_totals]
+    Personal Care
+    Savings [exclude_from_totals]
+    Shopping
+    - Clothes
+    - Other
+    - Household
+    - Skincare + Haircare
+    Subscriptions
+    Transportation
+    Travel & Vacation
+    - Activities
+    - Food & Drinks
+    - Hotel
+    - Shopping
+    - Transportation
+    Work Expenses [exclude_from_totals]
+
+- id: the-whole-shabang
+  title: The Whole Shabang
+  author: Kyle from Houston
+  description: My categories that I use for envelope based budgeting as a single, cat-dad, homeowner with roommates! Everything extra for the month gets rolled into the general savings category and I can move an allocate that money back out to budget categories if needed if I happen to go over one month.
+  tags:
+    - Solo / single
+    - Salaried employee
+    - Simple
+  categories: |
+    Auto
+    - Auto Care
+    - Auto Service
+    - Gas
+    - Mileage Reimbursement
+    - 🅿️ Tolls/Parking
+    Communication
+    - Internet
+    - Phone
+    - Storage/Software
+    Financial Expenses
+    - Fees
+    - Health
+    - Insurance
+    - Pet Health
+    - Taxes
+    Food
+    - Groceries
+    - Restaurants
+    - Treats & Drinks
+    Home
+    - HOA Dues
+    - Home Insurance
+    - Home Maintenance
+    - Home Services
+    - Mortgage
+    - Utilities
+    Income [income]
+    - Gift [income]
+    - Interest [income]
+    - Rental Income [income]
+    - Salary [income]
+    - Sales [income]
+    Life
+    - Charity
+    - Education/Development
+    - Events
+    - Grooming
+    - Gym/Fitness
+    - Subscriptions
+    Shopping
+    - Cleaning Supplies
+    - Clothing
+    - Electronics
+    - Gifts
+    - Hobbies/Games
+    - Home & Garden
+    - Office Supplies
+    - Personal Care
+    - ⬛ Pet Supplies
+    Travel
+    - Flights
+    - Hotels & Rentals
+    - Public Transit
+    - Ride Share
+    Payment/Transfer [exclude_from_budget, exclude_from_totals]
+    Savings
+    Reimbursable [exclude_from_budget, exclude_from_totals]
+
+- id: for-the-meticulous-detailed-financier
+  title: For the meticulous, detailed financier
+  author: John from Denver
+  description: All 401k income and HSA contributions (along with growth/gains in investments) is not considered income. Designed for a saver (not a spender). Categories set up where transfer to savings accounts/investments are not considered spending but can still be budgeted for.
+  tags:
+    - Solo / single
+    - Salaried employee
+    - Detailed
+    - Frequent traveler
+    - Power user
+  categories: |
+    Income [income]
+    - Wages [income]
+    - Interest Income [income]
+    - Bonus [income]
+    - Gifts [income]
+    - Rewards Income [income]
+    - Tax Refunds [income]
+    - Income - Other [income]
+    Housing
+    - Property Tax
+    - HOA
+    - Homeowners Insurance
+    - Flood Insurance
+    - Routine Maintenance
+    - Electricity
+    - Natural Gas
+    - Internet
+    - Cell Phone Bill
+    - Moving Expenses
+    - Mortgage and Rent
+    - Housing - Other
+    Food and Drink
+    - Groceries
+    - Restaurants
+    - Coffee and Hot Chocolate
+    - Fast Food
+    - Liquor
+    - Food and Drink - Other
+    Automotive
+    - Gas and Fuel
+    - Car Insurance
+    - Automotive Services
+    - Car Registration Fees
+    Medical
+    - Dentist
+    - Eye Care
+    - Medical - Other
+    - Primary Care
+    Physical Health
+    - Pickleball
+    - Skiing
+    - Gym and Fitness
+    - Personal Care - Other
+    Travel
+    - Air Travel
+    - Excursions
+    - Lodging
+    - Rental Cars
+    - Travel Company
+    - Travel - Food and Drink
+    - Travel - Other
+    General Merchandise
+    - Bookstores and Newsstands
+    - Clothing and Accessories
+    - Electronics and Software
+    - Gifts and Novelties
+    - Kitchen
+    - Membership Fees
+    - Merchandise - Other
+    - Office Supplies
+    - Online Marketplaces
+    - Sporting Goods
+    - Superstores
+    General Entertainment
+    - Tickets
+    - Entertainment
+    - Gaming
+    - Streaming
+    - Cooking Classes
+    General Services
+    - Hair and Beauty
+    - Education
+    - General Services - Other
+    - Insurance (not car or home)
+    - Postage and Shipping
+    - Storage
+    Government and Non-profit
+    - Donations
+    - Government and Non-profit - Other
+    - Tax Payments
+    Home Improvement
+    - Furniture
+    - Hardware
+    - Home Improvement - Other
+    - Repair and Maintenance
+    - Security
+    Transportation
+    - Bikes and Scooters
+    - Parking (not airports)
+    - Public Transit
+    - Taxis and Ride Shares (not to/from airport--would be in air travel)
+    - Tolls
+    - Transportation - Other
+    Investment/Savings Budget Transfers [exclude_from_totals]
+    Savings "Internal" Transfers [exclude_from_budget, exclude_from_totals]
+    Christmas Gifts
+    Reimbursement Transaction Groups [exclude_from_budget, exclude_from_totals]
+    401k [exclude_from_budget, exclude_from_totals]
+    - 401k - Change in Market Value [exclude_from_budget, exclude_from_totals]
+    - 401k - Direct Paycheck Contribution [exclude_from_budget, exclude_from_totals]
+    - 401k - Dividends [exclude_from_budget, exclude_from_totals]
+    - 401k - Fund Administrative Fees [exclude_from_budget, exclude_from_totals]
+    - 401k - Other [exclude_from_budget, exclude_from_totals]
+    Debt Payments [exclude_from_budget, exclude_from_totals]
+    - Credit Card Payment [exclude_from_budget, exclude_from_totals]
+    - Debt Payment - Other [exclude_from_budget, exclude_from_totals]
+    HSA [exclude_from_budget, exclude_from_totals]
+    - HSA - Contributions [exclude_from_budget, exclude_from_totals]
+    - HSA - Fees [exclude_from_budget, exclude_from_totals]
+    - HSA - Interest/Dividends [exclude_from_budget, exclude_from_totals]
+    - HSA - Internal Sell/Buy [exclude_from_budget, exclude_from_totals]
+    - HSA - Medical Spending [exclude_from_budget, exclude_from_totals]
+    - HSA - Other [exclude_from_budget, exclude_from_totals]
+    Personal Investment Internal [exclude_from_budget, exclude_from_totals]
+    - Buy [exclude_from_budget, exclude_from_totals]
+    - Capital Gain [exclude_from_budget, exclude_from_totals]
+    - Dividends [exclude_from_budget, exclude_from_totals]
+    - Reinvestment [exclude_from_budget, exclude_from_totals]
+    - Sell [exclude_from_budget, exclude_from_totals]
+    - Sweep Out [exclude_from_budget, exclude_from_totals]
+    - Change in Market Value [exclude_from_budget, exclude_from_totals]
+    - Contributions [exclude_from_budget, exclude_from_totals]
+    - Fund Administrative Fees [exclude_from_budget, exclude_from_totals]
+    - Investment Internal - Other [exclude_from_budget, exclude_from_totals]
+    - Trade Commissions [exclude_from_budget, exclude_from_totals]
+    Transfers [exclude_from_budget, exclude_from_totals]
+    - Account Transfer [exclude_from_budget, exclude_from_totals]
+
+- id: emmas-categories
+  title: Emma's categories
+  author: Emma from Montreal
+  description: Tagged for solo / single, roommates, salaried employee. 24 categories.
+  tags:
+    - Solo / single
+    - Roommates
+    - Salaried employee
+    - Minimalist
+    - Frequent traveler
+    - Cross-border
+  categories: |
+    Bank Fees
+    Entertainment
+    Food
+    - Alcohol, Bars
+    - Coffee Shops
+    - Groceries
+    - Restaurants
+    Gas, Transportation
+    Gifts
+    Home
+    Immigration
+    Income [income]
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+    Personal Care
+    - Gym
+    - Personal Care misc
+    - Sports gear
+    Rent
+    Shopping
+    Subscriptions/books
+    Tax
+    Travel
+    Withdrawal [exclude_from_budget, exclude_from_totals]
+    Work Travel [exclude_from_budget, exclude_from_totals]

@@ -1,0 +1,32 @@
+# Controlled vocabulary for template tags.
+#
+# Every tag used in data/templates.yml must appear here. Tags are grouped so the
+# library can render them as separate filter sections.
+#
+# Adding a tag is a deliberate change: prefer reusing an existing tag so filters
+# stay useful. If you do add one, keep the label short and human-readable.
+
+- id: audience
+  label: Who it's for
+  tags:
+    - Solo / single
+    - Couple / household
+    - Family with kids
+    - Roommates
+    - Salaried employee
+    - Freelancer
+    - Entrepreneur / business owner
+    - Frequent traveler
+    - Cross-border
+    - Own rental properties
+    - Pastor
+
+- id: style
+  label: Setup style
+  tags:
+    - Simple
+    - Detailed
+    - High-level
+    - Power user
+    - Minimalist
+    - Tax Optimization
