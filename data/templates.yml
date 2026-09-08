@@ -2627,3 +2627,128 @@
     Travel
     Withdrawal [exclude_from_budget, exclude_from_totals]
     Work Travel [exclude_from_budget, exclude_from_totals]
+
+- id: lunch-money-basic-essentials
+  title: Basic Essentials
+  author: Lunch Money
+  official: true
+  description: >-
+    One of the starter sets Lunch Money offers during onboarding. A flat list of
+    everyday categories, with no groups to keep in order.
+  categories: |
+    Alcohol, Bars
+    Childcare
+    Bank Fees
+    Coffee Shops
+    Entertainment
+    Gas
+    Ridesharing
+    Gifts
+    Groceries
+    Food Delivery
+    Home, Auto
+    Personal Care
+    Pets
+    Restaurants
+    Self-improvement
+    Shopping
+    Travel
+    Income [income]
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+
+- id: lunch-money-detailed-categories
+  title: Detailed Categories
+  author: Lunch Money
+  official: true
+  description: >-
+    The set Lunch Money starts you on during onboarding. Eleven groups covering
+    housing, food, transport and the rest, each broken into subcategories.
+  categories: |
+    Housing
+    - Rent, Mortgage
+    - Property Tax
+    - HOA Fees
+    - Home Insurance
+    - Home Maintenance
+    Utilities
+    - Electricity
+    - Water
+    - Internet
+    - Phone
+    Food and Drinks
+    - Alcohol, Bars
+    - Groceries
+    - Restaurants
+    - Coffee Shops
+    - Food Delivery
+    Transportation
+    - Car Payment
+    - Gas
+    - Auto Insurance
+    - Car Maintenance
+    - Public Transit
+    - Rideshare, Taxi
+    Entertainment
+    - Streaming Services
+    - Events
+    - Gaming
+    - Books, Media
+    Shopping
+    - Clothing
+    - Electronics
+    - Home Goods
+    Financial
+    - Bank Fees
+    - Taxes
+    - Interest, Fees
+    Personal Care
+    - Healthcare
+    - Self-improvement
+    - Beauty, Wellness
+    - Fitness
+    Travel
+    - Air Transit
+    - Hotels
+    - Experiences
+    Family
+    - Childcare
+    - Education
+    - Activities
+    - Clothing, Essentials
+    - Toys
+    Pets
+    - Food and Supplies
+    - Veterinary Care
+    - Pet insurance
+    - Grooming, Care Services
+    Income [income]
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]
+
+- id: lunch-money-needs-wants-savings
+  title: Needs, Wants, Savings
+  author: Lunch Money
+  official: true
+  description: >-
+    One of the starter sets Lunch Money offers during onboarding, for anyone
+    splitting spending into needs, wants, and what is put aside.
+  categories: |
+    Needs
+    - Housing
+    - Utilities
+    - Groceries
+    - Transportation
+    - Insurance
+    - Healthcare
+    Wants
+    - Entertainment
+    - Dining Out
+    - Shopping
+    - Hobbies
+    - Subscriptions
+    Savings & Debt
+    - Emergency Fund
+    - Retirement
+    - Debt Payments
+    - Investments
+    Income [income]
+    Payment, Transfer [exclude_from_budget, exclude_from_totals]

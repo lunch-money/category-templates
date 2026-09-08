@@ -79,6 +79,9 @@ A complete, commented example lives in
   appears here.
 - **`categories`** — your category list in Lunch Money's import format (below).
 - **`notes`** — optional, for context that does not belong in the description.
+- **`official`** — reserved for the starter sets that ship with Lunch Money itself, which
+  are transcribed from the `@lunch-money/preset-categories` package. Community
+  submissions leave it out entirely rather than setting it to `false`.
 
 ### Writing the categories block
 

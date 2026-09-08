@@ -16,7 +16,7 @@ TAGS_PATH = File.join(ROOT, "data", "tags.yml")
 REQUIRED_FIELDS = %w[id title author description categories].freeze
 # Audience tags are optional: a setup whose submitter told us nothing about who
 # they are still belongs in the library, and it keeps its derived style tier.
-OPTIONAL_FIELDS = %w[notes tags in_their_words].freeze
+OPTIONAL_FIELDS = %w[notes tags in_their_words official].freeze
 # A tag below this many templates returns a near-empty filter. Reported rather
 # than enforced, so a single submission is never blocked by it.
 MIN_TAG_USES = 3
@@ -220,6 +220,16 @@ class Validator
     validate_categories(template["categories"], label)
     validate_text(template["notes"], "notes", label) if template.key?("notes")
     validate_in_their_words(template["in_their_words"], label) if template.key?("in_their_words")
+    validate_official(template["official"], label) if template.key?("official")
+  end
+
+  # Marks a setup that ships with Lunch Money itself rather than one a reader
+  # sent in. Only `true` is meaningful: a community setup simply omits the field
+  # rather than declaring `official: false`.
+  def validate_official(official, label)
+    return if official == true
+
+    error("#{label} has 'official' set to #{official.inspect} (only 'true' is allowed; omit the field otherwise)")
   end
 
   def validate_id(id, position, seen_ids)

@@ -175,6 +175,21 @@ CASES = [
     templates: [template("categories" => "Food\n- \n")],
     expect: "subcategory with no name",
   },
+  {
+    name: "accepts a setup marked official",
+    templates: [template("official" => true)],
+    passes: true,
+  },
+  {
+    name: "rejects official set to false rather than omitted",
+    templates: [template("official" => false)],
+    expect: "only 'true' is allowed",
+  },
+  {
+    name: "rejects a non-boolean official",
+    templates: [template("official" => "yes")],
+    expect: "only 'true' is allowed",
+  },
 ].freeze
 
 failures = []
