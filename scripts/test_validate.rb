@@ -116,7 +116,7 @@ CASES = [
     templates: [template],
     tags: [
       { "id" => "audience", "label" => "Who it's for", "tags" => ["Solo / single"] },
-      { "id" => "style", "label" => "Setup style", "derived" => "category_count", "tags" => [
+      { "id" => "style", "label" => "Setup size", "derived" => "category_count", "tags" => [
         { "label" => "Simple", "max" => 39 },
         { "label" => "Comprehensive", "min" => 80 },
       ] },
@@ -128,7 +128,7 @@ CASES = [
     templates: [template],
     tags: [
       { "id" => "audience", "label" => "Who it's for", "tags" => ["Solo / single"] },
-      { "id" => "style", "label" => "Setup style", "derived" => "category_count", "tags" => [
+      { "id" => "style", "label" => "Setup size", "derived" => "category_count", "tags" => [
         { "label" => "Simple", "min" => 10, "max" => 39 },
         { "label" => "Comprehensive", "min" => 40 },
       ] },

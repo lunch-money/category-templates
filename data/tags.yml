@@ -4,7 +4,7 @@
 #
 #   * Audience tags are stored on each template in data/templates.yml. Every tag
 #     used there must appear in the "audience" group below.
-#   * Setup style is derived from the category count at render time, so it is
+#   * Setup size is derived from the category count at render time, so it is
 #     never stored per template and never self-reported. Its tiers are listed
 #     here only so the site can render them as filters.
 #
@@ -25,7 +25,7 @@
     - Cross-border
 
 - id: style
-  label: Setup style
+  label: Setup size
   derived: category_count
   tags:
     - label: Simple

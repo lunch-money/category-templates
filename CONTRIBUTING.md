@@ -13,7 +13,7 @@ useful than anything we could invent.
 - **Tags that already exist.** Filters only work when setups share tags. A tag earns its
   place in the filter bar at roughly three setups; below that it returns a near-empty
   result. Detail that is true of only your setup belongs in the description instead.
-- **No setup style tag.** Simple, Detailed and Comprehensive are worked out from how many
+- **No setup size tag.** Simple, Detailed and Comprehensive are worked out from how many
   categories your setup has, so there is nothing to pick and nothing to keep in sync.
 
 ## Submitting via pull request
@@ -75,7 +75,7 @@ A complete, commented example lives in
   the setup, so it does not need trimming.
 - **`tags`** — optional, all from the `audience` group in [`data/tags.yml`](data/tags.yml).
   Leave it out rather than reaching for a tag that does not really apply. If nothing fits,
-  add a tag in the same pull request and say why. Setup style is derived, so it never
+  add a tag in the same pull request and say why. Setup size is derived, so it never
   appears here.
 - **`categories`** — your category list in Lunch Money's import format (below).
 - **`notes`** — optional, for context that does not belong in the description.

@@ -71,7 +71,7 @@ That example defines two groups (`Income`, `Housing`), one standalone category
 ### Tags
 
 Tags come from the controlled vocabulary in [`data/tags.yml`](data/tags.yml), which groups
-them into "Who it's for" and "Setup style". Reuse an existing tag when one fits; filters
+them into "Who it's for" and "Setup size". Reuse an existing tag when one fits; filters
 are only useful when tags are shared across setups.
 
 ## Validating locally
