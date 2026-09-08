@@ -16,14 +16,17 @@ TAGS_PATH = File.join(ROOT, "data", "tags.yml")
 REQUIRED_FIELDS = %w[id title author description categories].freeze
 # Audience tags are optional: a setup whose submitter told us nothing about who
 # they are still belongs in the library, and it keeps its derived style tier.
-OPTIONAL_FIELDS = %w[notes tags].freeze
+OPTIONAL_FIELDS = %w[notes tags in_their_words].freeze
 # A tag below this many templates returns a near-empty filter. Reported rather
 # than enforced, so a single submission is never blocked by it.
 MIN_TAG_USES = 3
 ALLOWED_FIELDS = (REQUIRED_FIELDS + OPTIONAL_FIELDS).freeze
 ALLOWED_PROPERTIES = %w[income exclude_from_budget exclude_from_totals].freeze
 ID_PATTERN = /\A[a-z0-9]+(-[a-z0-9]+)*\z/
-MAX_DESCRIPTION = 600
+# The card description is a one-line summary; the submitter's own account is
+# shown in full once a reader opens the setup, so it is allowed more room.
+MAX_DESCRIPTION = 240
+MAX_IN_THEIR_WORDS = 2000
 
 class Validator
   attr_reader :errors, :notices
@@ -216,6 +219,7 @@ class Validator
     validate_tags(template["tags"], label, known_tags)
     validate_categories(template["categories"], label)
     validate_text(template["notes"], "notes", label) if template.key?("notes")
+    validate_in_their_words(template["in_their_words"], label) if template.key?("in_their_words")
   end
 
   def validate_id(id, position, seen_ids)
@@ -259,6 +263,19 @@ class Validator
 
     if description.length > MAX_DESCRIPTION
       error("#{label} description is #{description.length} characters (max #{MAX_DESCRIPTION})")
+    end
+  end
+
+  def validate_in_their_words(text, label)
+    return if text.nil?
+
+    unless text.is_a?(String) && !text.strip.empty?
+      error("#{label} in_their_words must be a non-empty string")
+      return
+    end
+
+    if text.length > MAX_IN_THEIR_WORDS
+      error("#{label} in_their_words is #{text.length} characters (max #{MAX_IN_THEIR_WORDS})")
     end
   end
 

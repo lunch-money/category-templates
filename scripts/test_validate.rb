@@ -157,8 +157,18 @@ CASES = [
   },
   {
     name: "rejects an over-long description",
-    templates: [template("description" => "x" * 601)],
-    expect: "max 600",
+    templates: [template("description" => "x" * 241)],
+    expect: "max 240",
+  },
+  {
+    name: "accepts the submitter's own account alongside a short description",
+    templates: [template("in_their_words" => "We tried a few systems before this one stuck.")],
+    passes: true,
+  },
+  {
+    name: "rejects an over-long in_their_words",
+    templates: [template("in_their_words" => "x" * 2001)],
+    expect: "max 2000",
   },
   {
     name: "rejects a named subcategory with no name",

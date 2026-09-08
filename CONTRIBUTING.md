@@ -66,9 +66,13 @@ A complete, commented example lives in
 - **`title`** — distinct from every other title in the file.
 - **`author`** — a name, a handle, a first name and city, whatever you prefer. Use
   something you are happy to have published.
-- **`description`** — up to 600 characters, written in complete sentences for someone
-  deciding whether this setup fits their life. Say what the setup does and how it is
-  organised, rather than answering "anything special about this?".
+- **`description`** — one short line, up to 240 characters, shown on the card. It has to
+  earn a reader's click, so lead with what makes this setup different. Do not restate the
+  title, the number of categories or anything already covered by a tag: all three sit
+  right next to it on the card.
+- **`in_their_words`** — optional, and the place for the longer story. Why you built it
+  this way, what it fixed, what you would change. It appears in full when someone opens
+  the setup, so it does not need trimming.
 - **`tags`** — optional, all from the `audience` group in [`data/tags.yml`](data/tags.yml).
   Leave it out rather than reaching for a tag that does not really apply. If nothing fits,
   add a tag in the same pull request and say why. Setup style is derived, so it never

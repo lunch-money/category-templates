@@ -11,10 +11,16 @@
   title: Example Household Budget
   # However you would like to be credited.
   author: Jane from Toronto
-  # Up to 600 characters. Write it for someone deciding whether this fits their life.
+  # One short line for the card, up to 240 characters. Skip anything already shown
+  # beside it: the title, the category count, and the tags.
   description: >-
-    A two-person household setup that keeps fixed bills separate from day-to-day
-    spending, so the variable categories are the only ones worth checking weekly.
+    Fixed bills sit apart from day-to-day spending, so only a handful of categories
+    need checking each week.
+  # Optional, and shown in full when someone opens the setup. Say as much as you like
+  # about why it is built this way.
+  in_their_words: |-
+    We started with a category per merchant and drowned in it. Splitting fixed from
+    variable meant we only had to think about five numbers a week.
   # Optional. Audience tags only, all from data/tags.yml. Setup style (Simple,
   # Detailed, Comprehensive) is derived from the category count, so it is not listed here.
   tags:
