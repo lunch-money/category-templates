@@ -13,18 +13,24 @@ ROOT = File.expand_path("..", __dir__)
 TEMPLATES_PATH = File.join(ROOT, "data", "templates.yml")
 TAGS_PATH = File.join(ROOT, "data", "tags.yml")
 
-REQUIRED_FIELDS = %w[id title author description tags categories].freeze
-OPTIONAL_FIELDS = %w[notes].freeze
+REQUIRED_FIELDS = %w[id title author description categories].freeze
+# Audience tags are optional: a setup whose submitter told us nothing about who
+# they are still belongs in the library, and it keeps its derived style tier.
+OPTIONAL_FIELDS = %w[notes tags].freeze
+# A tag below this many templates returns a near-empty filter. Reported rather
+# than enforced, so a single submission is never blocked by it.
+MIN_TAG_USES = 3
 ALLOWED_FIELDS = (REQUIRED_FIELDS + OPTIONAL_FIELDS).freeze
 ALLOWED_PROPERTIES = %w[income exclude_from_budget exclude_from_totals].freeze
 ID_PATTERN = /\A[a-z0-9]+(-[a-z0-9]+)*\z/
 MAX_DESCRIPTION = 600
 
 class Validator
-  attr_reader :errors
+  attr_reader :errors, :notices
 
   def initialize
     @errors = []
+    @notices = []
   end
 
   def error(message)
@@ -56,7 +62,28 @@ class Validator
       validate_template(template, index, known_tags, seen_ids, seen_titles)
     end
 
+    report_thin_tags(templates, known_tags)
+
     @errors.empty?
+  end
+
+  # Not an error: one submission should never be blocked because it is the first
+  # of its kind. It is a prompt to prune the vocabulary once the dust settles.
+  def report_thin_tags(templates, known_tags)
+    counts = Hash.new(0)
+    templates.each do |template|
+      next unless template.is_a?(Hash) && template["tags"].is_a?(Array)
+
+      template["tags"].each { |tag| counts[tag] += 1 if tag.is_a?(String) }
+    end
+
+    thin = known_tags.to_a.map { |tag| [tag, counts[tag]] }.select { |_, count| count < MIN_TAG_USES }
+    return if thin.empty?
+
+    thin.sort_by { |tag, count| [count, tag] }.each do |tag, count|
+      @notices << "'#{tag}' is used by #{count} template#{"s" unless count == 1} " \
+                  "(below the #{MIN_TAG_USES} needed for a useful filter)"
+    end
   end
 
   private
@@ -97,7 +124,19 @@ class Validator
       end
 
       tags = group["tags"]
-      unless tags.is_a?(Array) && tags.all? { |tag| tag.is_a?(String) && !tag.strip.empty? }
+      unless tags.is_a?(Array) && !tags.empty?
+        error("#{label} 'tags' must be a non-empty list")
+        next
+      end
+
+      # A derived group's tiers are computed from each setup's category count,
+      # so they are ranges rather than names templates can claim for themselves.
+      if group["derived"]
+        validate_derived_tiers(tags, label)
+        next
+      end
+
+      unless tags.all? { |tag| tag.is_a?(String) && !tag.strip.empty? }
         error("#{label} 'tags' must be a list of non-empty strings")
         next
       end
@@ -109,6 +148,46 @@ class Validator
     end
 
     known
+  end
+
+  def validate_derived_tiers(tiers, label)
+    previous_max = nil
+
+    tiers.each_with_index do |tier, index|
+      position = "#{label} tier ##{index + 1}"
+
+      unless tier.is_a?(Hash) && tier["label"].is_a?(String) && !tier["label"].strip.empty?
+        error("#{position} must be a mapping with a 'label'")
+        next
+      end
+
+      min = tier["min"]
+      max = tier["max"]
+
+      unless min.nil? || min.is_a?(Integer)
+        error("#{position} 'min' must be a whole number of categories")
+      end
+      unless max.nil? || max.is_a?(Integer)
+        error("#{position} 'max' must be a whole number of categories")
+      end
+      if min.is_a?(Integer) && max.is_a?(Integer) && min > max
+        error("#{position} has min #{min} above max #{max}")
+      end
+
+      error("#{position} is open ended on both sides") if min.nil? && max.nil? && tiers.length > 1
+      if index.zero? && min
+        error("#{position} is the first tier and must not set 'min', so small setups always match")
+      end
+      if index == tiers.length - 1 && max
+        error("#{position} is the last tier and must not set 'max', so large setups always match")
+      end
+
+      # Tiers must tile the number line: no setup should fall between two of them.
+      if previous_max && min && min != previous_max + 1
+        error("#{position} starts at #{min} but the previous tier ends at #{previous_max} — tiers must be contiguous")
+      end
+      previous_max = max
+    end
   end
 
   def validate_template(template, index, known_tags, seen_ids, seen_titles)
@@ -300,6 +379,10 @@ validator = Validator.new
 if validator.run
   templates = YAML.safe_load_file(TEMPLATES_PATH)
   puts "OK: #{templates.length} templates passed validation"
+  unless validator.notices.empty?
+    puts "\nThin tags:"
+    validator.notices.each { |message| puts "  - #{message}" }
+  end
   exit 0
 end
 

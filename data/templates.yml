@@ -11,11 +11,12 @@
 - id: as-simple-as-possible-but-no-simpler
   title: As simple as possible but no simpler
   author: EG
-  description: Categories designed to track spending and income, not for detailed budgeting. Includes some specific categories to track particular areas of interest, and the rest are as general as possible to keep it simple.
+  description: >-
+    Categories built to track spending and income rather than support detailed budgeting. A handful
+    cover specific areas of interest, and the rest stay deliberately general.
   tags:
     - Solo / single
     - Salaried employee
-    - Simple
     - Frequent traveler
     - Cross-border
   categories: |
@@ -54,12 +55,13 @@
 - id: broad-spending
   title: Broad Spending
   author: Kevin from Seattle
-  description: We're fortunate enough to not have to budget strictly, but I am VERY particular about correctly categorizing each expense so we can easily track our spending to ensure it doesn't get out of control, and to prevent discretionary spending from ballooning. I tend to use the Shopping high-level…
+  description: >-
+    Built for precise tracking rather than strict budgeting. Shopping deliberately collects every
+    non-essential purchase, so a single number shows the discretionary spending that could be cut
+    back when saving needs to ramp up.
   tags:
     - Couple / household
     - Salaried employee
-    - High-level
-    - Power user
     - Frequent traveler
   categories: |
     Food & Drink
@@ -129,12 +131,12 @@
 - id: categorize-all-the-things
   title: Categorize All the Things
   author: Mike from New York
-  description: General-purpose category setup for tracking spending and investments, inspired by my history with financial software.
+  description: >-
+    A general-purpose setup for tracking both spending and investments, shaped by years of using
+    other personal finance software.
   tags:
     - Couple / household
     - Salaried employee
-    - Detailed
-    - Power user
     - Frequent traveler
   categories: |
     Cash & ATM [exclude_from_budget]
@@ -252,10 +254,11 @@
 - id: family-basics
   title: Family Basics
   author: Tom from Chicago
-  description: Nope, but it's served us really well over the last year.
+  description: >-
+    A pared-back household setup that sorts everything into seven everyday groups covering bills,
+    food, home, entertainment, shopping, income and financial transfers.
   tags:
     - Couple / household
-    - Detailed
   categories: |
     Bills
     - HOA
@@ -304,10 +307,10 @@
 - id: just-millennial-things
   title: Just Millennial Things
   author: Harvest
-  description: This is a simple but comprehensive system that works especially well with rules and the budget features so that all your categories and subcategories are neatly tracked every month. It has everything from grouping all your bills together, to being able to track how much you spend on daily…
+  description: >-
+    A compact system designed to work alongside rules and budgets. Bills are grouped together, and
+    daily necessities stay separate from quality-of-life spending and savings goals.
   tags:
-    - Power user
-    - Simple
     - Solo / single
   categories: |
     Bills & Recurring Payments
@@ -342,12 +345,12 @@
 - id: variable-and-fix-separation
   title: Variable and Fix Separation
   author: Igi
-  description: Tagged for solo / single, salaried employee, detailed. 24 categories.
+  description: >-
+    Splits spending into fixed and variable costs using numbered groups, so the two read as separate
+    lines in the budget. Mortgage payments and transfers sit outside the totals.
   tags:
     - Solo / single
     - Salaried employee
-    - Detailed
-    - Power user
   categories: |
     100 Income [income]
     - 101_Income [income]
@@ -377,11 +380,12 @@
 - id: functional-view
   title: Functional View
   author: Cody from USA
-  description: We're a family with kids and I have a job that has irregular income. I like this setup because it helps me think about i) spend I can't change (periodic, recurring, etc.) ii)  how discretionary something is (e.g., a durable vs non-durable good - you'd spend more on a couch but that purchase is as…
+  description: >-
+    Organized around how much control you have over an expense rather than what was bought,
+    separating unavoidable recurring costs from discretionary ones. Food sits in its own group as
+    the household's largest flexible cost.
   tags:
     - Family with kids
-    - Detailed
-    - Power user
   categories: |
     Income [income]
     - My Paycheck [income]
@@ -453,11 +457,11 @@
 - id: simple-minimal-budget
   title: Simple, minimal budget
   author: Janos from Hungary
-  description: Tagged for solo / single, minimalist, simple. 28 categories.
+  description: >-
+    A 70/10/20 budget that sorts everything into needs, wants and savings, with income streams
+    broken out and transfers kept clear of the budget.
   tags:
     - Solo / single
-    - Minimalist
-    - Simple
   categories: |
     Paycheck [income]
     Other Income [income]
@@ -491,11 +495,13 @@
 - id: essential-categories
   title: Essential Categories
   author: Lorenzo from Italy
-  description: Tagged for couple / household, solo / single, simple. 64 categories.
+  description: >-
+    Covers everyday life across sixteen groups, with several income streams tracked separately
+    including salary, reimbursements and short-term rental income. A shared account group keeps
+    joint spending distinct.
   tags:
-    - Couple / household
     - Solo / single
-    - Simple
+    - Couple / household
   categories: |
     Travel
     - Air Transit
@@ -565,13 +571,13 @@
 - id: full-breakdown
   title: Full Breakdown
   author: Matt from Toronto
-  description: Tagged for solo / single, entrepreneur / business owner, salaried employee. 61 categories.
+  description: >-
+    Separates required and fixed spending from discretionary spending and luxuries. Savings,
+    transfers and mortgage lump-sum payments stay out of the totals so they never read as expenses.
   tags:
     - Solo / single
-    - Entrepreneur / business owner
     - Salaried employee
-    - Detailed
-    - Power user
+    - Self-employed
   categories: |
     Savings [exclude_from_budget, exclude_from_totals]
     Taxes
@@ -638,11 +644,12 @@
 - id: budget-with-partner-contribution
   title: Budget with partner contribution
   author: Gabriel from Canada
-  description: is a budget that's separated into categories, fixed one are detailled and variable expenses as well, I mostly check the budget tab in order to see where my money goes. My partner contributes a minimum fixed amount to cover the expenses that are shared but assumed by my accounts, such as mortage,…
+  description: >-
+    A French-language setup for splitting a household budget with a partner, keeping fixed and
+    variable expenses apart. The partner contributes a fixed monthly amount toward shared costs,
+    tracked as a recurring item.
   tags:
     - Couple / household
-    - Power user
-    - Detailed
     - Salaried employee
   categories: |
     INCOME [income]
@@ -699,12 +706,13 @@
 - id: this-crazy-life
   title: This Crazy Life
   author: Community member
-  description: Our two main goals are repaying a family loan and building up a 6-month emergency savings.
+  description: >-
+    Built around two goals: repaying a family loan and building a six-month emergency fund. Debt and
+    savings share a group, and vacation spending is tracked outside the budget.
   tags:
-    - Minimalist
-    - Salaried employee
-    - Family with kids
     - Couple / household
+    - Family with kids
+    - Salaried employee
   categories: |
     Income [income]
     Interest and Fees
@@ -765,11 +773,12 @@
 - id: essentials
   title: Essentials
   author: Mario from Spain
-  description: Tagged for solo / single, salaried employee, detailed. 55 categories.
+  description: >-
+    A balanced everyday setup covering housing, family, transport, food and personal care across
+    twelve groups, with subscriptions and services tracked on their own.
   tags:
     - Solo / single
     - Salaried employee
-    - Detailed
   categories: |
     Housing
     - Cleaning
@@ -830,9 +839,10 @@
 - id: bens-setup
   title: Ben's setup
   author: Ben from US
-  description: I use this category setup to separate recurring and expected expenses (bills, food) from highly variable stuff (everything else). I can accurately budget for rent, bills, and food, then set a top-level budget for everything else to stay in line with my comfortable spending level.
-  tags:
-    - High-level
+  description: >-
+    Separates recurring, predictable expenses like rent, bills and food from highly variable
+    spending. The predictable side can be budgeted precisely, while a single top-level budget caps
+    everything else.
   categories: |
     Income [income]
     - Wages [income]
@@ -873,9 +883,10 @@
 - id: dink-budget
   title: DINK Budget
   author: Alex from Ontario
-  description: |-
-    This is our simple Needs - Wants - Savings budget to help us stay on target for 30% savings goal. Enough categories to place most of our transactions, with Misc. options in both the Needs and Wants groups for those strange one-off expenses (German passport application, anyone?). 
-    A Work Expenses…
+  description: >-
+    A needs, wants and savings budget aimed at a 30% savings rate, with a miscellaneous option in
+    both needs and wants for one-off expenses. A work expenses group keeps reimbursable purchases
+    out of real spending, and retirement contributions track both employee and employer amounts.
   tags:
     - Couple / household
     - Salaried employee
@@ -942,12 +953,13 @@
 - id: my-detailed-life
   title: My Detailed Life
   author: Bhavik from Canada
-  description: Tagged for solo / single, salaried employee, detailed. 122 categories.
+  description: >-
+    A thoroughly subdivided setup where fourteen broad groups each break down into detailed
+    subcategories, covering everything from communication and housing to self-improvement and
+    travel.
   tags:
     - Solo / single
     - Salaried employee
-    - Detailed
-    - Power user
     - Frequent traveler
   categories: |
     Communication
@@ -1076,11 +1088,13 @@
 - id: broughton-budget
   title: Broughton Budget
   author: Meredith from Canada
-  description: Zero-based budget that filters out "reimbursable" expenses
+  description: >-
+    A zero-based budget from a pastor's household that filters reimbursable expenses out of the
+    totals, so work costs that come back never distort spending. Giving is its own top-level group,
+    and irregular expenses stay separate from fixed bills.
   tags:
     - Couple / household
     - Salaried employee
-    - Pastor
   categories: |
     Income Streams [income]
     - Wages (net) [income]
@@ -1142,11 +1156,12 @@
 - id: my-categories
   title: My Categories
   author: Jose S
-  description: Evolved from my Mint use
+  description: >-
+    The largest setup in the library, carried over and expanded from years of using Mint.
+    Twenty-three groups cover everything from immigration and insurance to kids and investments.
   tags:
     - Family with kids
     - Salaried employee
-    - Detailed
   categories: |
     Auto & Transport Category
     - OTHER Auto & Transport
@@ -1346,7 +1361,9 @@
 - id: boards-setup
   title: Board's setup
   author: Board Gamer from Canada
-  description: Tagged for solo / single, salaried employee. 43 categories.
+  description: >-
+    A mostly flat setup with a category per type of spending rather than deep nesting, including a
+    dedicated board games category alongside the usual essentials.
   tags:
     - Solo / single
     - Salaried employee
@@ -1398,11 +1415,12 @@
 - id: evans-basics
   title: Evans Basics
   author: Evan Purkhiser
-  description: Tagged for solo / single, salaried employee, detailed. 35 categories.
+  description: >-
+    Sorts spending into a few broad buckets like consumable food and experiences, with prefixed
+    utility categories collecting refunds, loans and transfers that should stay out of the budget.
   tags:
     - Solo / single
     - Salaried employee
-    - Detailed
   categories: |
     Income [income]
     Income (bonus) [income]
@@ -1443,7 +1461,9 @@
 - id: managing-household-expenses
   title: Managing Household Expenses
   author: Scandinavians in Michigan
-  description: It's working for us.
+  description: >-
+    A broad, mostly flat household setup with a category for each area of spending, including less
+    common ones like auctions, fraud and business expenses.
   tags:
     - Couple / household
   categories: |
@@ -1506,19 +1526,14 @@
 - id: digital-nomad-multi-biz-property-owner
   title: Digital Nomad Multi-biz & Property Owner
   author: Dylan from San Francisco
-  description: |-
-    Keep food simple, just eating out (restaurants) and eating in (groceries).
-
-    Keep entertainment simple, just one category.
-
-    I have transportation for daily life transport and travel transport separated. Since I'm a digital nomad sometimes living away from home for weeks at a time or more, I'll still…
+  description: >-
+    Keeps food and entertainment deliberately simple while separating daily transport from travel,
+    which suits long stretches spent away from home. Rental property income and costs are excluded
+    from totals and tagged per property, keeping that business apart from personal spending.
   tags:
     - Solo / single
-    - Freelancer
-    - Entrepreneur / business owner
-    - Simple
+    - Self-employed
     - Frequent traveler
-    - Own rental properties
   categories: |
     Fees
     Cash & ATM
@@ -1578,12 +1593,12 @@
 - id: where-it-all-goes
   title: Where It All Goes
   author: Mark from Wisconsin
-  description: Everything we track is a subcategory.  We never put anything in the parent categories, those we use just for grouping to make it more easy to see our spend across various larger buckets.
+  description: >-
+    Every tracked item is a subcategory, with parent categories used purely for grouping. That keeps
+    spending readable across a handful of larger buckets.
   tags:
     - Couple / household
     - Salaried employee
-    - Detailed
-    - Power user
     - Frequent traveler
   categories: |
     Income [income]
@@ -1641,16 +1656,16 @@
 - id: tax-time-ready-digital-nomad-family-complex
   title: Tax-Time Ready (Digital Nomad Family - Complex)
   author: Monica living in South Korea
-  description: Multiple rental properties in multiple states (some self- managed), expat family living overseas with a government civilian w-2 and a freelance&consulting spouse, active kids plus volunteering, and future-proofing investing. These categories have been developed and refined for over 15years for DIY…
+  description: >-
+    Refined over fifteen years for DIY US tax filing, covering an expat family with rental
+    properties in several states, a government W-2 income and a freelance consulting spouse.
+    Categories line up with what tax software asks for.
   tags:
     - Couple / household
     - Family with kids
-    - Freelancer
     - Salaried employee
-    - Detailed
+    - Self-employed
     - Cross-border
-    - Entrepreneur / business owner
-    - Tax Optimization
   categories: |
     Transfers [exclude_from_budget]
     - $ Cash on Hand ↔ Convert to ₩ [exclude_from_budget]
@@ -1812,10 +1827,11 @@
 - id: growing-family-granular-detail
   title: Growing Family Granular Detail
   author: Ethan a nomad
-  description: A setup for saving-focused budgeters who like a place for everything and everything in its place.
+  description: >-
+    Built for saving-focused budgeters who like a place for everything, with granular categories
+    across a growing family's spending.
   tags:
     - Family with kids
-    - Detailed
     - Salaried employee
   categories: |
     Income [income]
@@ -1868,10 +1884,11 @@
 - id: detailed
   title: Detailed
   author: Amelia
-  description: Similar to a P/L Statement with home categories added
+  description: >-
+    Modeled on a profit-and-loss statement with home categories added, using thirty-two top-level
+    lines that run from professional fees to equipment replacement savings.
   tags:
     - Solo / single
-    - Detailed
   categories: |
     Credit Card Payment [exclude_from_budget, exclude_from_totals]
     Bank Transfer [exclude_from_budget, exclude_from_totals]
@@ -1984,16 +2001,13 @@
 - id: arts-setup
   title: Art's setup
   author: Art from The Netherlans
-  description: |-
-    Idea is to have four categories
-    🎯 Goals (things you want to spend money on: savings, charity,...)
-    🧾 Fixed (more or less fixed spends/obligations: rent, lease, utilites)
-    🎛️ Variables (rest of usual monthly spends: food, events, hobbies)
-    🧰 True expenses (occasional but sure to happen: presents, taxes, vacation)
+  description: >-
+    Built on four ideas. Goals covers money you want to spend on saving and giving, fixed covers
+    obligations like rent and utilities, variable covers usual monthly spending, and true expenses
+    covers the occasional but certain, like taxes, presents and vacations.
   tags:
     - Family with kids
     - Salaried employee
-    - Detailed
   categories: |
     Goals
     - Emergency
@@ -2043,17 +2057,15 @@
 - id: community-category-setup
   title: Community category setup
   author: Community member
-  description: |-
-    Structured like a P&L would be. Each major Category represents a lever in the direction of your life, the detailed spend within tells the story. 
-    If you invest more dollars in the Health category and fewer dollars in the Vices category, you can expect an uptrend in Health.
-
-    There are Fixed or…
+  description: >-
+    Structured like a profit-and-loss statement, where each major group is a lever on the direction
+    of your life and the detail within tells the story. Fixed costs like home, admin and transport
+    sit apart from discretionary lifestyle choices.
   tags:
     - Solo / single
     - Couple / household
-    - Power user
-    - Frequent traveler
     - Salaried employee
+    - Frequent traveler
   categories: |
     Income [income]
     - Paycheck [income]
@@ -2161,7 +2173,9 @@
 - id: sids-setup
   title: Sid's setup
   author: Sid from San Diego
-  description: Tagged for family with kids, salaried employee. 132 categories.
+  description: >-
+    A comprehensive family setup with twenty-four groups covering kids, pets, an investment property
+    and detailed transfer handling. Investments and savings stay out of budgets and totals.
   tags:
     - Family with kids
     - Salaried employee
@@ -2302,11 +2316,12 @@
 - id: the-breakdown
   title: The Breakdown
   author: Taryn from Germany and The US
-  description: I play around with my categories as I get more familiar with my spending habits.
+  description: >-
+    An evolving setup that gets refined as spending habits become clearer, using mostly flat
+    categories with work expenses and savings excluded from totals.
   tags:
     - Solo / single
     - Salaried employee
-    - Detailed
     - Frequent traveler
   categories: |
     ATM Cash
@@ -2353,11 +2368,13 @@
 - id: the-whole-shabang
   title: The Whole Shabang
   author: Kyle from Houston
-  description: My categories that I use for envelope based budgeting as a single, cat-dad, homeowner with roommates! Everything extra for the month gets rolled into the general savings category and I can move an allocate that money back out to budget categories if needed if I happen to go over one month.
+  description: >-
+    Built for envelope budgeting as a single homeowner with roommates and pets. Anything left at
+    month end rolls into general savings, which can be pulled back out to cover a category that runs
+    over.
   tags:
     - Solo / single
     - Salaried employee
-    - Simple
   categories: |
     Auto
     - Auto Care
@@ -2421,13 +2438,14 @@
 - id: for-the-meticulous-detailed-financier
   title: For the meticulous, detailed financier
   author: John from Denver
-  description: All 401k income and HSA contributions (along with growth/gains in investments) is not considered income. Designed for a saver (not a spender). Categories set up where transfer to savings accounts/investments are not considered spending but can still be budgeted for.
+  description: >-
+    Designed for savers. Retirement income, HSA contributions and investment growth are not counted
+    as income, and transfers into savings or investments are not treated as spending while still
+    being budgetable.
   tags:
     - Solo / single
     - Salaried employee
-    - Detailed
     - Frequent traveler
-    - Power user
   categories: |
     Income [income]
     - Wages [income]
@@ -2560,12 +2578,12 @@
 - id: emmas-categories
   title: Emma's categories
   author: Emma from Montreal
-  description: Tagged for solo / single, roommates, salaried employee. 24 categories.
+  description: >-
+    A shared-housing setup for someone who recently moved countries, tracking immigration costs and
+    reimbursable work travel as their own categories, both kept out of the budget.
   tags:
     - Solo / single
-    - Roommates
     - Salaried employee
-    - Minimalist
     - Frequent traveler
     - Cross-border
   categories: |

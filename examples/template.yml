@@ -15,10 +15,10 @@
   description: >-
     A two-person household setup that keeps fixed bills separate from day-to-day
     spending, so the variable categories are the only ones worth checking weekly.
-  # One or more tags from data/tags.yml.
+  # Optional. Audience tags only, all from data/tags.yml. Setup style (Simple,
+  # Detailed, Comprehensive) is derived from the category count, so it is not listed here.
   tags:
     - Couple / household
-    - Simple
   # Optional. Context that does not belong in the description.
   notes: We revisit the fixed categories once a year when bills change.
   # Your category list in Lunch Money's import format.

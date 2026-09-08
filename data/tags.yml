@@ -1,10 +1,17 @@
 # Controlled vocabulary for template tags.
 #
-# Every tag used in data/templates.yml must appear here. Tags are grouped so the
-# library can render them as separate filter sections.
+# Two kinds of tags exist:
 #
-# Adding a tag is a deliberate change: prefer reusing an existing tag so filters
-# stay useful. If you do add one, keep the label short and human-readable.
+#   * Audience tags are stored on each template in data/templates.yml. Every tag
+#     used there must appear in the "audience" group below.
+#   * Setup style is derived from the category count at render time, so it is
+#     never stored per template and never self-reported. Its tiers are listed
+#     here only so the site can render them as filters.
+#
+# Adding an audience tag is a deliberate change. A tag has to describe a
+# genuinely different money situation and apply to at least three templates,
+# otherwise it returns a near-empty filter and just adds noise to the bar.
+# Detail that is true of only one or two setups belongs in their descriptions.
 
 - id: audience
   label: Who it's for
@@ -12,21 +19,19 @@
     - Solo / single
     - Couple / household
     - Family with kids
-    - Roommates
     - Salaried employee
-    - Freelancer
-    - Entrepreneur / business owner
+    - Self-employed
     - Frequent traveler
     - Cross-border
-    - Own rental properties
-    - Pastor
 
 - id: style
   label: Setup style
+  derived: category_count
   tags:
-    - Simple
-    - Detailed
-    - High-level
-    - Power user
-    - Minimalist
-    - Tax Optimization
+    - label: Simple
+      max: 39
+    - label: Detailed
+      min: 40
+      max: 79
+    - label: Comprehensive
+      min: 80

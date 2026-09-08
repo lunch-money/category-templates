@@ -23,12 +23,16 @@ VALID_TEMPLATE = {
   "categories" => "Income [income]\n- Paycheck [income]\nGroceries\n",
 }.freeze
 
-def run_validator(templates)
+def run_validator(templates, tag_groups = nil)
   Dir.mktmpdir("category-templates-test") do |dir|
     FileUtils.mkdir_p(File.join(dir, "data"))
     FileUtils.mkdir_p(File.join(dir, "scripts"))
     FileUtils.cp(VALIDATOR, File.join(dir, "scripts", "validate.rb"))
-    FileUtils.cp(File.join(ROOT, "data", "tags.yml"), File.join(dir, "data", "tags.yml"))
+    if tag_groups
+      File.write(File.join(dir, "data", "tags.yml"), YAML.dump(tag_groups))
+    else
+      FileUtils.cp(File.join(ROOT, "data", "tags.yml"), File.join(dir, "data", "tags.yml"))
+    end
     File.write(File.join(dir, "data", "templates.yml"), YAML.dump(templates))
 
     output = `ruby #{File.join(dir, "scripts", "validate.rb")} 2>&1`
@@ -93,9 +97,43 @@ CASES = [
     expect: "unknown tag",
   },
   {
-    name: "rejects empty tags",
+    name: "rejects an empty tags list",
     templates: [template("tags" => [])],
-    expect: "missing required field 'tags'",
+    expect: "tags must be a non-empty list",
+  },
+  {
+    name: "accepts a template with no tags at all",
+    templates: [template.tap { |entry| entry.delete("tags") }],
+    passes: true,
+  },
+  {
+    name: "rejects a derived tier claimed as a template tag",
+    templates: [template("tags" => ["Comprehensive"])],
+    expect: "unknown tag",
+  },
+  {
+    name: "rejects derived tiers that leave a gap",
+    templates: [template],
+    tags: [
+      { "id" => "audience", "label" => "Who it's for", "tags" => ["Solo / single"] },
+      { "id" => "style", "label" => "Setup style", "derived" => "category_count", "tags" => [
+        { "label" => "Simple", "max" => 39 },
+        { "label" => "Comprehensive", "min" => 80 },
+      ] },
+    ],
+    expect: "must be contiguous",
+  },
+  {
+    name: "rejects a first derived tier that sets a minimum",
+    templates: [template],
+    tags: [
+      { "id" => "audience", "label" => "Who it's for", "tags" => ["Solo / single"] },
+      { "id" => "style", "label" => "Setup style", "derived" => "category_count", "tags" => [
+        { "label" => "Simple", "min" => 10, "max" => 39 },
+        { "label" => "Comprehensive", "min" => 40 },
+      ] },
+    ],
+    expect: "must not set 'min'",
   },
   {
     name: "rejects an unknown category property",
@@ -132,7 +170,7 @@ CASES = [
 failures = []
 
 CASES.each do |test_case|
-  passed, output = run_validator(test_case[:templates])
+  passed, output = run_validator(test_case[:templates], test_case[:tags])
 
   if test_case[:passes]
     if passed

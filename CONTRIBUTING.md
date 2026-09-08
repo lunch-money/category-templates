@@ -10,7 +10,11 @@ useful than anything we could invent.
 - **A description that helps someone self-select.** Who is this for, and what does it
   optimise for? "Zero-based budget that filters out reimbursable expenses" tells a reader
   much more than "my categories".
-- **Tags that already exist.** Filters only work when setups share tags.
+- **Tags that already exist.** Filters only work when setups share tags. A tag earns its
+  place in the filter bar at roughly three setups; below that it returns a near-empty
+  result. Detail that is true of only your setup belongs in the description instead.
+- **No setup style tag.** Simple, Detailed and Comprehensive are worked out from how many
+  categories your setup has, so there is nothing to pick and nothing to keep in sync.
 
 ## Submitting via pull request
 
@@ -62,10 +66,13 @@ A complete, commented example lives in
 - **`title`** — distinct from every other title in the file.
 - **`author`** — a name, a handle, a first name and city, whatever you prefer. Use
   something you are happy to have published.
-- **`description`** — up to 600 characters. Write it for someone deciding whether this
-  setup fits their life.
-- **`tags`** — at least one, all from [`data/tags.yml`](data/tags.yml). If nothing fits,
-  add a tag in the same pull request and say why.
+- **`description`** — up to 600 characters, written in complete sentences for someone
+  deciding whether this setup fits their life. Say what the setup does and how it is
+  organised, rather than answering "anything special about this?".
+- **`tags`** — optional, all from the `audience` group in [`data/tags.yml`](data/tags.yml).
+  Leave it out rather than reaching for a tag that does not really apply. If nothing fits,
+  add a tag in the same pull request and say why. Setup style is derived, so it never
+  appears here.
 - **`categories`** — your category list in Lunch Money's import format (below).
 - **`notes`** — optional, for context that does not belong in the description.
 
