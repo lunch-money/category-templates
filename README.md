@@ -33,7 +33,7 @@ renamed or removed without a notice in the release notes.
 | --- | --- | --- |
 | `id` | yes | Stable, unique slug. Lowercase words separated by single hyphens. Never change an existing id — it is used in links. |
 | `title` | yes | Short, distinct name for the setup. |
-| `author` | yes | How the contributor wants to be credited. |
+| `author` | yes | How the contributor wants to be credited. Keep and respect this value when reusing a template. |
 | `description` | yes | What the setup is for and who it suits. Up to 240 characters. |
 | `categories` | yes | The category list, in Lunch Money's import format. |
 | `tags` | no | Optional tags from [`data/tags.yml`](data/tags.yml). |
@@ -96,5 +96,5 @@ marketing site via CI after changes merge.
 This repository and its published dataset are licensed under the
 [Creative Commons Attribution 4.0 International License](LICENSE).
 
-When reusing the data, keep each template's `author` field with the template and credit
-the contributors listed in [CREDITS.md](CREDITS.md).
+When reusing the data, keep and respect each template's `author` field. That per-template
+field is the attribution record for CC BY reuse.
