@@ -65,7 +65,8 @@ A complete, commented example lives in
   once and leave it alone; it is used in links to your setup.
 - **`title`** — distinct from every other title in the file.
 - **`author`** — a name, a handle, a first name and city, whatever you prefer. Use
-  something you are happy to have published.
+  something you are happy to have published; this field is the credit others should keep
+  with your template.
 - **`description`** — one short line, up to 240 characters, shown on the card. It has to
   earn a reader's click, so lead with what makes this setup different. Do not restate the
   title, the number of categories or anything already covered by a tag: all three sit

@@ -5,8 +5,7 @@ Community-contributed category setups for [Lunch Money](https://lunchmoney.app).
 Browse them at **[lunchmoney.app/category-templates](https://lunchmoney.app/category-templates)**.
 
 This repository is the source of truth for that library. It contains data only — no
-application code. When a change lands on `main`, an automated pull request updates the
-marketing site, which renders the library as a static page.
+application code. Maintainers sync published data to the marketing site via CI.
 
 ## Contributing your setup
 
@@ -17,7 +16,7 @@ we will add it for you.
 
 ## Using the data
 
-The dataset is published as YAML and is free to use:
+The dataset is published as YAML and is free to use under CC BY 4.0:
 
 ```
 https://raw.githubusercontent.com/lunch-money/category-templates/main/data/templates.yml
@@ -34,11 +33,13 @@ renamed or removed without a notice in the release notes.
 | --- | --- | --- |
 | `id` | yes | Stable, unique slug. Lowercase words separated by single hyphens. Never change an existing id — it is used in links. |
 | `title` | yes | Short, distinct name for the setup. |
-| `author` | yes | How the contributor wants to be credited. |
-| `description` | yes | What the setup is for and who it suits. Up to 600 characters. |
-| `tags` | yes | One or more tags from [`data/tags.yml`](data/tags.yml). |
+| `author` | yes | How the contributor wants to be credited. Keep and respect this value when reusing a template. |
+| `description` | yes | What the setup is for and who it suits. Up to 240 characters. |
 | `categories` | yes | The category list, in Lunch Money's import format. |
+| `tags` | no | Optional tags from [`data/tags.yml`](data/tags.yml). |
+| `in_their_words` | no | Longer contributor-written context shown when someone opens the setup. |
 | `notes` | no | Extra context that does not belong in the description. |
+| `official` | no | Reserved for starter sets that ship with Lunch Money itself. Community templates omit it. |
 
 ### The `categories` block
 
@@ -87,23 +88,13 @@ and the structure of each `categories` block.
 
 ## How changes reach the site
 
-`main` is the only branch that publishes. On merge, the
-[sync workflow](.github/workflows/sync-marketing-site.yml) revalidates the dataset,
-regenerates the marketing site's Jekyll data files, and opens (or updates) a pull request
-on `lunch-money/marketing-site`. Netlify builds a deploy preview of `/category-templates`
-for that pull request; merging it ships the change.
-
-To regenerate those files locally against a marketing-site checkout:
-
-```sh
-ruby scripts/render-marketing-data.rb ../marketing-site
-```
-
-The workflow needs a `MARKETING_SITE_TOKEN` repository secret — a token with `contents:write`
-and `pull-requests:write` on `lunch-money/marketing-site`. Without it the sync job fails at
-the checkout step; everything else in this repository still works.
+`main` is the only branch that publishes. Maintainers sync published data to the
+marketing site via CI after changes merge.
 
 ## Licence
 
-The dataset in `data/` is released under [CC0 1.0](LICENSE) — use it for anything, no
-attribution required.
+This repository and its published dataset are licensed under the
+[Creative Commons Attribution 4.0 International License](LICENSE).
+
+When reusing the data, keep and respect each template's `author` field. That per-template
+field is the attribution record for CC BY reuse.
