@@ -14,9 +14,21 @@ permissions:
 jobs:
   update-comment:
     name: Update validation PR comment
-    if: ${{ github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.pull_requests[0] }}
+    if: ${{ github.event.workflow_run.event == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
+      # Explicitly check out the default branch of THIS repository (never the PR
+      # head). The privileged workflow only ever sources trusted script code from
+      # here; contributor code from a fork PR head is never fetched or executed.
+      - name: Check out trusted script from default branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/validation-comment.js
+          sparse-checkout-cone-mode: false
+
       - name: Download validation result
         if: ${{ github.event.workflow_run.conclusion != 'success' }}
         uses: actions/download-artifact@v4
@@ -31,82 +43,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            const path = require('path');
             const fs = require('fs');
-
-            const marker = '<!-- category-templates-validation-comment -->';
-            const pr = context.payload.workflow_run.pull_requests[0];
-            const conclusion = context.payload.workflow_run.conclusion;
-            const issue_number = pr.number;
-            const {owner, repo} = context.repo;
-
-            const comments = await github.paginate(github.rest.issues.listComments, {
-              owner,
-              repo,
-              issue_number,
-              per_page: 100,
-            });
-            const existing = comments.find((comment) =>
-              comment.user?.type === 'Bot' && comment.body?.includes(marker)
-            );
-
-            if (conclusion === 'success') {
-              if (existing) {
-                await github.rest.issues.deleteComment({
-                  owner,
-                  repo,
-                  comment_id: existing.id,
-                });
-                core.info(`Cleared validation comment on #${issue_number}.`);
-              } else {
-                core.info(`No validation comment to clear on #${issue_number}.`);
-              }
-              return;
-            }
-
-            let details = [
-              'The validation workflow did not pass, but no captured validator output was available.',
-            ].join('\n');
-            try {
-              details = fs.readFileSync('validation-result/validation-comment.md', 'utf8').trim();
-            } catch (error) {
-              core.warning(`Could not read validation output artifact: ${error.message}`);
-            }
-
-            const runUrl = context.payload.workflow_run.html_url;
-            let body = [
-              marker,
-              '### Template validation needs attention',
-              '',
-              details,
-              '',
-              `[Open the validation run](${runUrl}) for the full logs.`,
-            ].join('\n');
-
-            const maxCommentLength = 65000;
-            if (body.length > maxCommentLength) {
-              body = [
-                body.slice(0, maxCommentLength - 250),
-                '',
-                'Output truncated because it is too long for a GitHub comment.',
-                '',
-                `[Open the validation run](${runUrl}) for the full logs.`,
-              ].join('\n');
-            }
-
-            if (existing) {
-              await github.rest.issues.updateComment({
-                owner,
-                repo,
-                comment_id: existing.id,
-                body,
-              });
-              core.info(`Updated validation comment on #${issue_number}.`);
-            } else {
-              await github.rest.issues.createComment({
-                owner,
-                repo,
-                issue_number,
-                body,
-              });
-              core.info(`Created validation comment on #${issue_number}.`);
-            }
+            const { run } = require(path.join(process.env.GITHUB_WORKSPACE, 'scripts', 'validation-comment.js'));
+            await run({ github, context, core, fs });
