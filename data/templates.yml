@@ -2752,3 +2752,15 @@
     - Investments
     Income [income]
     Payment, Transfer [exclude_from_budget, exclude_from_totals]
+
+# Temporary entry used to verify that fork-PR validation comments work.
+# This pull request will be closed without merging.
+- id: validation-comment-test
+  title: Validation Comment Test
+  author: Lunch Money test
+  description: >-
+    Temporary test entry for the fork pull-request validation workflow.
+  tags:
+    - Definitely not a real tag
+  categories: |
+    Test Category
