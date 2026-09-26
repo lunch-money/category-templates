@@ -24,13 +24,24 @@ function buildContext({
   event = 'pull_request',
   pull_requests = [],
   head_sha = 'headsha',
+  head_branch,
+  head_repository,
   conclusion = 'failure',
   html_url = 'https://github.com/lunch-money/category-templates/actions/runs/1',
 } = {}) {
   return {
     repo: REPO,
     payload: {
-      workflow_run: { event, pull_requests, head_sha, conclusion, html_url, id: 1 },
+      workflow_run: {
+        event,
+        pull_requests,
+        head_sha,
+        head_branch,
+        head_repository,
+        conclusion,
+        html_url,
+        id: 1,
+      },
     },
   };
 }
@@ -44,9 +55,15 @@ function openPR({ number, headSha, state = 'open', baseFullName = FULL_NAME }) {
   };
 }
 
-function buildGithub({ prByNumber = {}, associated = [], comments = [] } = {}) {
+function buildGithub({
+  prByNumber = {},
+  associated = [],
+  forkPulls = [],
+  comments = [],
+} = {}) {
   const calls = {
     associated: [],
+    pullList: [],
     prGet: [],
     listComments: [],
     createComment: [],
@@ -66,6 +83,10 @@ function buildGithub({ prByNumber = {}, associated = [], comments = [] } = {}) {
         },
       },
       pulls: {
+        list: async (params) => {
+          calls.pullList.push(params);
+          return { data: forkPulls };
+        },
         get: async ({ pull_number }) => {
           calls.prGet.push(pull_number);
           const pr = prByNumber[pull_number];
@@ -128,6 +149,35 @@ test('fork PR (empty pull_requests) falls back to listPullRequestsAssociatedWith
   assert.equal(calls.associated[0].commit_sha, 'forksha');
   assert.equal(calls.associated[0].owner, REPO.owner);
   assert.equal(calls.associated[0].repo, REPO.repo);
+  assert.equal(calls.pullList.length, 0);
+});
+
+test('fork PR falls back to head owner and branch when associated-commit lookup is empty', async () => {
+  const { github, calls } = buildGithub({
+    prByNumber: { 8: openPR({ number: 8, headSha: 'forksha' }) },
+    associated: [],
+    forkPulls: [{ number: 8 }],
+  });
+  const context = buildContext({
+    pull_requests: [],
+    head_sha: 'forksha',
+    head_branch: 'test/invalid-template-validation',
+    head_repository: { owner: { login: 'jpjpjp' } },
+  });
+
+  const result = await run({ github, context, core: CORE, fs: FS_WITH_LOG });
+
+  assert.equal(result.action, 'created');
+  assert.equal(result.pull_number, 8);
+  assert.equal(calls.associated.length, 1);
+  assert.equal(calls.pullList.length, 1);
+  assert.deepEqual(calls.pullList[0], {
+    owner: REPO.owner,
+    repo: REPO.repo,
+    state: 'open',
+    head: 'jpjpjp:test/invalid-template-validation',
+    per_page: 100,
+  });
 });
 
 test('stale run: PR head SHA no longer matches workflow_run.head_sha → skip, no writes', async () => {

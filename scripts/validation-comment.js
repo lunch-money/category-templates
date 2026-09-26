@@ -23,6 +23,24 @@ async function resolvePullRequest({ github, context, workflowRun }) {
       { owner, repo, commit_sha: headSha, per_page: 100 },
     );
     candidateNumbers = associated.map((pr) => pr.number);
+
+    // GitHub can return no associated PRs when the workflow ran against a
+    // commit owned by a fork. In that case, resolve the contributor's open PR
+    // from the head repository owner and branch included in workflow_run.
+    if (candidateNumbers.length === 0) {
+      const headOwner = workflowRun.head_repository?.owner?.login;
+      const headBranch = workflowRun.head_branch;
+      if (headOwner && headBranch) {
+        const forkPulls = await github.paginate(github.rest.pulls.list, {
+          owner,
+          repo,
+          state: 'open',
+          head: `${headOwner}:${headBranch}`,
+          per_page: 100,
+        });
+        candidateNumbers = forkPulls.map((pr) => pr.number);
+      }
+    }
   }
 
   for (const number of candidateNumbers) {
