@@ -19,8 +19,74 @@ jobs:
         with:
           ruby-version: "3.3"
 
-      - name: Validate templates
-        run: ruby scripts/validate.rb
+      - name: Run validation checks
+        id: validation
+        shell: bash
+        run: |
+          set +e
 
-      - name: Test validator
-        run: ruby scripts/test_validate.rb
+          ruby scripts/validate.rb > "$RUNNER_TEMP/validate.log" 2>&1
+          validate_status=$?
+          cat "$RUNNER_TEMP/validate.log"
+
+          ruby scripts/test_validate.rb > "$RUNNER_TEMP/test_validate.log" 2>&1
+          test_status=$?
+          cat "$RUNNER_TEMP/test_validate.log"
+
+          {
+            echo "Validation failed for commit \`${GITHUB_SHA}\`."
+            echo
+            echo "| Check | Result |"
+            echo "| --- | --- |"
+            if [ "$validate_status" -eq 0 ]; then
+              echo "| \`ruby scripts/validate.rb\` | Passed |"
+            else
+              echo "| \`ruby scripts/validate.rb\` | Failed with exit code $validate_status |"
+            fi
+            if [ "$test_status" -eq 0 ]; then
+              echo "| \`ruby scripts/test_validate.rb\` | Passed |"
+            else
+              echo "| \`ruby scripts/test_validate.rb\` | Failed with exit code $test_status |"
+            fi
+            echo
+            echo "<details open>"
+            echo "<summary><code>ruby scripts/validate.rb</code></summary>"
+            echo
+            echo '```text'
+            cat "$RUNNER_TEMP/validate.log"
+            echo '```'
+            echo
+            echo "</details>"
+            echo
+            echo "<details>"
+            echo "<summary><code>ruby scripts/test_validate.rb</code></summary>"
+            echo
+            echo '```text'
+            cat "$RUNNER_TEMP/test_validate.log"
+            echo '```'
+            echo
+            echo "</details>"
+          } > "$RUNNER_TEMP/validation-comment.md"
+
+          if [ "$validate_status" -ne 0 ] || [ "$test_status" -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Upload validation result
+        if: ${{ always() && github.event_name == 'pull_request' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-result
+          path: ${{ runner.temp }}/validation-comment.md
+          if-no-files-found: ignore
+
+  test-workflow-scripts:
+    name: Test workflow scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run validation-comment tests
+        run: node --test scripts/test_validation_comment.js

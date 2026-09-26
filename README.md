@@ -36,8 +36,8 @@ renamed or removed without a notice in the release notes.
 | `author` | yes | How the contributor wants to be credited. Keep and respect this value when reusing a template. |
 | `description` | yes | What the setup is for and who it suits. Up to 240 characters. |
 | `categories` | yes | The category list, in Lunch Money's import format. |
-| `tags` | no | Optional tags from [`data/tags.yml`](data/tags.yml). |
-| `in_their_words` | no | Longer contributor-written context shown when someone opens the setup. |
+| `tags` | no | Optional template-library filters from [`data/tags.yml`](data/tags.yml). These are separate from Lunch Money transaction tags; setup size is derived automatically. |
+| `in_their_words` | no | Longer contributor-written context shown when someone opens the setup. Up to 2,000 characters. |
 | `notes` | no | Extra context that does not belong in the description. |
 | `official` | no | Reserved for starter sets that ship with Lunch Money itself. Community templates omit it. |
 
@@ -71,20 +71,27 @@ That example defines two groups (`Income`, `Housing`), one standalone category
 
 ### Tags
 
-Tags come from the controlled vocabulary in [`data/tags.yml`](data/tags.yml), which groups
-them into "Who it's for" and "Setup size". Reuse an existing tag when one fits; filters
-are only useful when tags are shared across setups.
+Tags come from the controlled vocabulary in [`data/tags.yml`](data/tags.yml). They are
+template-library filters, not Lunch Money transaction tags, and only audience tags are
+stored on templates.
+
+Reuse an existing audience tag when one fits; filters are only useful when tags are shared
+across setups. Leave `tags` out rather than adding a one-off detail. Setup size ("Simple",
+"Detailed" or "Comprehensive") is derived from the category count and should never be
+listed in a template.
 
 ## Validating locally
 
-Validation requires Ruby and uses only the standard library:
+Local validation is optional. If you have Ruby installed, this command gives you the same
+checks as CI with a faster feedback loop:
 
 ```sh
 ruby scripts/validate.rb
 ```
 
-The same check runs on every pull request. It verifies the schema, unique ids, known tags,
-and the structure of each `categories` block.
+CI runs validation on every pull request and comments with any errors it finds. The check
+verifies the schema, unique ids, known template tags, and the structure of each
+`categories` block.
 
 ## How changes reach the site
 

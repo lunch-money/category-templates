@@ -10,9 +10,10 @@ useful than anything we could invent.
 - **A description that helps someone self-select.** Who is this for, and what does it
   optimise for? "Zero-based budget that filters out reimbursable expenses" tells a reader
   much more than "my categories".
-- **Tags that already exist.** Filters only work when setups share tags. A tag earns its
-  place in the filter bar at roughly three setups; below that it returns a near-empty
-  result. Detail that is true of only your setup belongs in the description instead.
+- **Tags that already exist.** Template tags are library filters, not Lunch Money
+  transaction tags. Filters only work when setups share tags. A tag earns its place in the
+  filter bar at roughly three setups; below that it returns a near-empty result. Detail
+  that is true of only your setup belongs in the description instead.
 - **No setup size tag.** Simple, Detailed and Comprehensive are worked out from how many
   categories your setup has, so there is nothing to pick and nothing to keep in sync.
 
@@ -21,17 +22,30 @@ useful than anything we could invent.
 1. Fork this repository.
 2. Append your setup to the **end** of [`data/templates.yml`](data/templates.yml). Entries
    are ordered oldest first, so new submissions go at the bottom.
-3. Run `ruby scripts/validate.rb` and fix anything it reports.
+3. If you have Ruby installed and want a faster feedback loop, run
+   `ruby scripts/validate.rb` and fix anything it reports.
 4. Open a pull request describing your setup in a sentence or two.
 
-Validation also runs automatically on your pull request, so you do not need Ruby installed
-locally — but it is a much faster feedback loop if you do.
+Validation runs automatically on every pull request, so local Ruby is optional. CI will
+comment with validation errors when something needs fixing and clear that comment when
+the pull request passes.
 
 ## Submitting without GitHub
 
 Email [team@lunchmoney.app](mailto:team@lunchmoney.app) with your category list, a name for
 the setup, a short description, and how you would like to be credited. We will open the
 pull request for you.
+
+## Choosing tags
+
+Tags in this repository describe who a template is for. They are separate from Lunch Money
+transaction tags and are not imported into anyone's account.
+
+Use the existing audience tags in [`data/tags.yml`](data/tags.yml) when they genuinely
+fit. Leave `tags` out rather than stretching for a weak match: filters are useful only
+when the same tag appears across several setups, and one-off details usually belong in
+`description` or `in_their_words`. Setup size is derived automatically from the number of
+categories, so never add `Simple`, `Detailed` or `Comprehensive` yourself.
 
 ## The format
 
@@ -45,7 +59,6 @@ Copy this template and fill it in:
     One or two sentences about what this setup is for and who it suits.
   tags:
     - Solo / single
-    - Simple
   categories: |
     Income [income]
     - Paycheck [income]
@@ -73,8 +86,9 @@ A complete, commented example lives in
   right next to it on the card.
 - **`in_their_words`** — optional, and the place for the longer story. Why you built it
   this way, what it fixed, what you would change. It appears in full when someone opens
-  the setup, so it does not need trimming.
-- **`tags`** — optional, all from the `audience` group in [`data/tags.yml`](data/tags.yml).
+  the setup, up to 2,000 characters.
+- **`tags`** — optional template-library filters, all from the `audience` group in
+  [`data/tags.yml`](data/tags.yml). These are separate from Lunch Money transaction tags.
   Leave it out rather than reaching for a tag that does not really apply. If nothing fits,
   add a tag in the same pull request and say why. Setup size is derived, so it never
   appears here.
@@ -117,10 +131,11 @@ The three valid properties are `income`, `exclude_from_budget`, and
 - Duplicate ids or titles.
 - Duplicate categories within the same group.
 - Unknown properties or tags.
-- Emoji-only or empty category names.
+- Empty category names.
 
 Emoji in category names are fine to include; the library strips them when displaying and
-copying, so your setup reads cleanly for everyone.
+copying, so your setup reads cleanly for everyone. Prefer names that are not emoji-only so
+the stripped display still has text, but that is guidance rather than a validation rule.
 
 ## What happens after merge
 
