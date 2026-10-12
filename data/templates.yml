@@ -2752,3 +2752,177 @@
     - Investments
     Income [income]
     Payment, Transfer [exclude_from_budget, exclude_from_totals]
+
+- id: fire-household-ledger
+  title: FIRE Household Ledger
+  author: Charles from Queens, NY
+  description: >-
+    Strict separation of money spent from money moved: transfers, rebalances, and card payments stay out of income and expense reports, while a
+    budget-only SWR placeholder fills the General Pool without fake income.
+  in_their_words: |-
+    We retired early in 2026 and needed budgeting that works without a paycheck.  Three groups hold money that isn't spending: Revenue (real income only),
+    Investments (capital moving between positions), and Ledger Movements (transfers, credit card payments, reconciliation). The last two carry
+    exclude_from_budget and exclude_from_totals so reports show actual consumption, not shuffling. FIRE Drawdowns is the trick that makes
+    budgeting work: it never receives a transaction. You type your monthly safe-withdrawal amount into its Budgeted column and set "Base income on"
+    to "Larger of budgeted and actual income activity" — the General Pool  fills with your planned spend while income reports stay honest. Actual
+    brokerage-to-cash moves get categorized as Brokerage Draw under Ledger Movements, so you can measure what you really pulled against plan.
+    Working households can ignore the placeholder, set income to actual activity, and use Paycheck/Bonus as-is; traditionally retired users add
+    Social Security and Pension beside RMD. Oddities we hit along the way  have homes too: reverse-signed cash back and sweep-fund dividends
+    (Inverted Cash Deposits), partner allowance transfers (FI-RE), and  balance plugs (Audit Adjustment).
+  tags:
+    - Couple / household
+  notes: >-
+    Pairs well with General Pool rollovers if you draw quarterly or annually instead of monthly.
+  categories: |
+    ✈️ Travel
+    - 🍱 Airplane Food
+    - 🥐 Airport Food
+    - 🛫 Air Travel
+    - 🚆 Bus/Train
+    - 🏨 Hotel
+    - 🚘 Rental Car & Taxi
+    ❓ Miscellaneous
+    - 👵 Elder Care
+    - 🤲 Loose Change/Petty Cash
+    🍔 Food & Drinks
+    - 🍸 Alcohol, Bars
+    - ☕ Coffee Shops
+    - 🍟 Fast Food
+    - 🛵 Food Delivery
+    - 🛒 Groceries
+    - 🍽️ Restaurants
+    - 🍿 Snacks
+    - 🥪 Work Lunch
+    🎁 Gifts & Donations
+    - 🎂 Birthday Gifts
+    - ❤️ Charity
+    - 🎄 Christmas Gifts
+    - 🎀 Gift
+    - 🤝 Loan
+    🎓 Education
+    - 📚 Books & Supplies
+    - 🏫 Training
+    🎭 Entertainment
+    - 🎢 Amusement
+    - 🎨 Arts
+    - 🎟️ Event Tickets
+    - 🎰 Lottery/Gambling
+    - 🎬 Movies & DVDs
+    - 🎵 Music
+    - 📰 Newspapers & Magazines
+    - 🎉 Party
+    - 🎮 Video Games
+    🏃 Health & Fitness
+    - 🦷 Dentist
+    - 🩺 Doctor
+    - 👁️ Eyecare
+    - 🏋️ Gym
+    - 🏥 Health Insurance
+    - 💊 Pharmacy
+    - ⚽ Sports
+    🏛️ Financial
+    - 🧭 Financial Advisor
+    - ⚕️ HSA
+    - 🕊️ Life Insurance
+    - ⛑️ Long Term Care Insurance
+    - 📋 Personal Property Insurance
+    - 🏢 Rental Insurance
+    🏠 Housing
+    - 🫕 Appliances
+    - 🛡️ Appliances Insurance
+    - 🛋️ Furnishings
+    - 📜 HOA Fees
+    - 🔨 Home Improvement
+    - 🏡 Home Insurance
+    - 🔔 Home Security System
+    - 🧰 Home Services
+    - 🗄️ Home Storage
+    - 🧴 Home Supplies
+    - 🧹 Household Items
+    - 🔑 Mortgage & Rent
+    💡 Bills & Utilities
+    - ☎️ Home Phone
+    - 🔒 Home Security
+    - 🌐 Internet
+    - 🌱 Lawn Service
+    - 📱 Mobile Phone
+    - 📺 Television
+    - ⚡ Utilities
+    🎯 FIRE Drawdowns [income, exclude_from_totals]
+    💰 Revenue [income]
+    - 🪙 Bonus
+    - 💵 Income
+    - 💹 Dividend & Cap Gains
+    - 📈 Interest Income
+    - 💲 Paycheck
+    - 🤑 Personal
+    - 📆 RMD
+    - 💱 Reimbursement
+    ⚠️ Fees & Charges
+    - 🏧 ATM Fee
+    - 🏦 Bank Fee
+    - 💳 Credit Card Fee
+    - 🪃 Loan Payment
+    - 💸 Finance Charge
+    - 🧮 Service Fee
+    - 🚨 Violation
+    💼 Business Services
+    - 🤖 AI
+    - 🛡️ Credit Protection
+    - 📶 Internet Access
+    - ⚖️ Legal
+    - 🎫 Membership Fees
+    - 📎 Office Supplies
+    - ☁️ Online Services
+    - 🔁 Online Subscriptions
+    - 🖨️ Printing
+    - 📦 Shipping
+    📊 Investments [exclude_from_budget, exclude_from_totals]
+    - 📥 Buy
+    - ₿ Crypto
+    - ⬆️ Deposit
+    - 🏗️ Home Equity Payment
+    - 🧱 Home Equity Principal
+    - 🛡️ Home Insurance Payment
+    - 💎 Inverted Cash Deposits
+    - 🔐 Retirement Account Activity
+    - 🏷️ Sell
+    - ⬇️ Withdrawal
+    📒 Ledger Movements [exclude_from_budget, exclude_from_totals]
+    - 🛠️ Audit Adjustment
+    - ↕️ Cash Activity
+    - 🟢 Credit Card Payment
+    - 🔥 FI-RE
+    - 📤 Brokerage Draw
+    - 🔄 Transfer
+    🪞 Personal Care
+    - 💇 Hair
+    - 🫧 Laundry
+    - 💆 Spa & Massage
+    🧾 Taxes
+    - 🇺🇸 Federal Tax
+    - 🏘️ Property Tax
+    - 🗽 State Tax
+    🚗 Auto & Transport
+    - 🛡️ Auto Insurance
+    - 🚙 Auto Payment
+    - 🔌 Electric Charging
+    - ⛽ Gas & Fuel
+    - 🛣️ Highway/Bridge Tolls
+    - 🅿️ Parking
+    - 🚌 Public Transportation
+    - 🚕 Ride Share
+    - 🔧 Service & Parts
+    🛍️ Shopping
+    - 📖 Books
+    - 👕 Clothing
+    - 💻 Electronics & Software
+    - 🧺 General Merchandise
+    - 🪁 Hobbies
+    - 🏀 Sporting Goods
+    - 🧸 Toys
+    🐾 Pets
+    - 🐕‍🦺 Vet & Medical
+    - 🥣 Food & Treats
+    - 🎾 Supplies & Toys
+    - 🛡️ Pet Insurance
