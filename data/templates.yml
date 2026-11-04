@@ -2928,8 +2928,8 @@
     - 🛡️ Pet Insurance
 
 - id: mint-default-categories
-  title: Mint default categories
-  author: Lunch Money, from Mint defaults
+  title: Mint Default Categories
+  author: Lunch Money
   description: >-
     The default category list Mint used before it shut down in 2024, rebuilt
     from public copies.
@@ -3071,8 +3071,8 @@
     - Check
 
 - id: ynab-default-categories
-  title: YNAB default categories
-  author: Lunch Money, from YNAB defaults
+  title: YNAB Default Categories
+  author: Lunch Money
   description: >-
     The classic YNAB starter budget groups (Immediate Obligations, True
     Expenses, Debt Payments, Quality of Life Goals, and Just for Fun), rebuilt
