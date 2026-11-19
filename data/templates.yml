@@ -2926,3 +2926,198 @@
     - 🥣 Food & Treats
     - 🎾 Supplies & Toys
     - 🛡️ Pet Insurance
+
+- id: mint-default-categories
+  title: Mint Default Categories
+  author: Lunch Money
+  description: >-
+    The default category list Mint used before it shut down in 2024, rebuilt
+    from public copies.
+  notes: |
+    Rebuilt from public copies of the default category list Mint used before it
+    shut down in early 2024. Intuit's mint-categories page now only shows a
+    Credit Karma notice: https://mint.intuit.com/mint-categories
+    The 2022 r/mintuit mapping is the list used here:
+    https://www.reddit.com/r/mintuit/comments/yws88g/how_to_categorize_exported_transactions_using/
+    The mint_categories.json gist adds Uncategorized subcategories Cash & ATM
+    and Check, which are included:
+    https://gist.github.com/daniyalzade/7db33725c659917997f5
+    That gist lacks Ride Share and Food Delivery, which the 2022 list has and
+    this template keeps. Another old gist adds Tolls and Tithe; those are not
+    in the 2022 list and are not included. Not affiliated with Mint or Intuit.
+  categories: |
+    Auto & Transport
+    - Auto Insurance
+    - Auto Payment
+    - Gas & Fuel
+    - Parking
+    - Public Transportation
+    - Ride Share
+    - Service & Parts
+    Bills & Utilities
+    - Home Phone
+    - Internet
+    - Mobile Phone
+    - Television
+    - Utilities
+    Business Services
+    - Advertising
+    - Legal
+    - Office Supplies
+    - Printing
+    - Shipping
+    Education
+    - Books & Supplies
+    - Student Loan
+    - Tuition
+    Entertainment
+    - Amusement
+    - Arts
+    - Movies & DVDs
+    - Music
+    - Newspapers & Magazines
+    Fees & Charges
+    - ATM Fee
+    - Bank Fee
+    - Finance Charge
+    - Late Fee
+    - Service Fee
+    - Trade Commissions
+    Financial
+    - Financial Advisor
+    - Life Insurance
+    Food & Dining
+    - Alcohol & Bars
+    - Coffee Shops
+    - Fast Food
+    - Food Delivery
+    - Groceries
+    - Restaurants
+    Gifts & Donations
+    - Charity
+    - Gift
+    Health & Fitness
+    - Dentist
+    - Doctor
+    - Eyecare
+    - Gym
+    - Health Insurance
+    - Pharmacy
+    - Sports
+    Home
+    - Furnishings
+    - Home Improvement
+    - Home Insurance
+    - Home Services
+    - Home Supplies
+    - Lawn & Garden
+    - Mortgage & Rent
+    Income [income]
+    - Bonus [income]
+    - Interest Income [income]
+    - Paycheck [income]
+    - Reimbursement [income]
+    - Rental Income [income]
+    - Returned Purchase [income]
+    Investments
+    - Buy
+    - Deposit
+    - Dividend & Cap Gains
+    - Sell
+    - Withdrawal
+    Kids
+    - Allowance
+    - Baby Supplies
+    - Babysitter & Daycare
+    - Child Support
+    - Kids Activities
+    - Toys
+    Loans
+    - Loan Fees and Charges
+    - Loan Insurance
+    - Loan Interest
+    - Loan Payment
+    - Loan Principal
+    Personal Care
+    - Hair
+    - Laundry
+    - Spa & Massage
+    Pets
+    - Pet Food & Supplies
+    - Pet Grooming
+    - Veterinary
+    Shopping
+    - Books
+    - Clothing
+    - Electronics & Software
+    - Hobbies
+    - Sporting Goods
+    Taxes
+    - Federal Tax
+    - Local Tax
+    - Property Tax
+    - Sales Tax
+    - State Tax
+    Transfer [exclude_from_totals]
+    - Credit Card Payment [exclude_from_totals]
+    - Transfer for Cash Spending [exclude_from_totals]
+    Travel
+    - Air Travel
+    - Hotel
+    - Rental Car & Taxi
+    - Vacation
+    Uncategorized
+    - Cash & ATM
+    - Check
+
+- id: ynab-default-categories
+  title: YNAB Default Categories
+  author: Lunch Money
+  description: >-
+    The classic YNAB starter budget groups (Immediate Obligations, True
+    Expenses, Debt Payments, Quality of Life Goals, and Just for Fun), rebuilt
+    from public copies.
+  notes: |
+    The classic starter budget groups (Immediate Obligations, True Expenses,
+    Debt Payments, Quality of Life Goals, Just for Fun) as listed in The
+    Budgeting Habit YNAB tutorial (third-party, 2018):
+    https://www.developgoodhabits.com/wp-content/uploads/2018/06/YNAB-Tutorial.pdf
+    YNAB later renamed its starter groups to Bills, Frequent, Non-Monthly,
+    Goals and Quality of Life Goals. YNAB's own blog confirms those newer
+    group names but not the categories inside them:
+    https://www.ynab.com/blog/how-many-ynab-categories
+    YNAB help:
+    https://support.ynab.com/en_us/getting-started-categories-in-ynab-rkWG3rp6x.md
+    This template does not invent categories under the newer group names.
+    Not affiliated with YNAB.
+  categories: |
+    Immediate Obligations
+    - Rent/Mortgage
+    - Electric
+    - Water
+    - Internet
+    - Groceries
+    - Transportation
+    - Interest and Fees
+    True Expenses
+    - Auto Maintenance
+    - Home Maintenance
+    - Renter's/Home Insurance
+    - Medical
+    - Clothing
+    - Gifts
+    - Giving
+    - Computer Replacement
+    - Software Subscriptions
+    Debt Payments
+    - Student Loan
+    - Auto Loan
+    Quality of Life Goals
+    - Vacation
+    - Fitness
+    - Education
+    Just for Fun
+    - Dining Out
+    - Gaming
+    - Music
+    - Fun Money
